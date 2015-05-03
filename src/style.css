@@ -1,0 +1,47 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.pane {
+    width: 100%;
+    height: 100vh;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    opacity: 0;
+}
+
+.floater {
+    height: 50%;
+}
+
+
+.pane-top {
+    background-image: radial-gradient(ellipse farthest-corner at 50% 50%, rgb(255, 211, 115) 0%, rgb(255, 180, 44) 100%);
+}
+
+
+.pane-top .content-inner {
+    width: 600px;
+    height: 600px;
+    margin: -300px auto 0 auto;
+    font-size: 45px;
+    color: white;
+    text-shadow: 2px 3px rgb(100, 100, 100);
+}
+
+.pane-top .content-inner h3 {
+    font-size: 1em;
+}
