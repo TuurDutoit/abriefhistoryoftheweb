@@ -1,0 +1,131 @@
+/*********
+ * FONTS *
+ *********/
+
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+
+@font-face {
+    font-family: 'Futura';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Futura'), local('Futura-Regular'), url(../fonts/futura.woff) format('woff');
+}
+
+
+
+
+/***************
+ * MAIN STYLES *
+ ***************/
+
+
+html, body, main {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Futura";
+}
+
+main {
+    overflow: hidden;
+}
+
+.pane {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+}
+
+.floater {
+    height: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************
+ * INDIVIDUAL STYLES *
+ *********************/
+
+
+.pane1 .content {
+    background-image: radial-gradient(ellipse closest-corner at 50% 50%, rgb(255, 185, 55) 0%, rgb(255, 165, 0) 100%);
+}
+
+
+.pane1-inner {
+    width: 60%;
+    height: 600px;
+    margin: -150px auto 0 auto;
+}
+
+.pane1-inner-title {
+    margin-bottom: 0;
+    font-size: 60px;
+    font-family: "Bree Serif";
+    color: white;
+    text-shadow: 2px 3px grey;
+}
+
+.pane1-inner-subtitle {
+    margin-top: 0;
+    font-size: 35px;
+    font-weight: 500;
+    color: #666666;
+}
+
+.pane1-start {
+    position: relative;
+    text-align: center;
+}
+
+.pane1-start-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    line-height: 58px;
+    font-size: 30px;
+    color: #666666;
+    display: none;
+}
+
+.pane1-start-button {
+    height: 58px;
+    margin: 0;
+    padding: 5px 15px;
+    overflow: hidden;
+    border: 5px solid white;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 30px;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    
+    transition: color .1s, background .1s;
+}
+
+.pane1-start-button:hover {
+    color: #FFB42B;
+    background: white;
+}
