@@ -14,6 +14,83 @@
 
 
 
+
+/*************
+ * KEYFRAMES *
+ *************/
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fade-out-scale {
+    0% {
+        opacity: 0;
+        transform: scale(.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes fade-out-scale {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(.9);
+    }
+}
+
+@-webkit-keyframes pane0-text {
+    0% {
+        max-width: 0px;
+    }
+    100% {
+        max-width: 240px;
+    }
+}
+
+@-webkit-keyframes pane0-button {
+    0% {
+        width: 117px;
+        padding: 5px 15px;
+        margin-left: 61px;
+    }
+    33%, 66% {
+        width: 0;
+        padding: 5px 0;
+        margin-left: 117px;
+    }
+    100% {
+        width: 0;
+        padding: 5px 0;
+        margin-left: 240px;
+    }
+}
+
+
+
+
+
+
 /***************
  * MAIN STYLES *
  ***************/
@@ -26,12 +103,45 @@ body {
 
 
 .pane {
-    visibility: hidden;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+.pane .content, .pane .gallery, .pane .sources {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.pane.show .content, .pane.show .gallery, .pane.show .sources {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s, visibility 0s 0s;
+}
+
+.floater {
+    height: 50%;
+}
+
+
+
+
+/**************
+ * ANIMATIONS *
+ **************/
+
+.pane {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s, visibility 0s 1s, z-index 0s 1s;
+}
+
+.pane .content, .pane .gallery, .pane .sources {
+    visibility: hidden;
     opacity: 0;
     transition: opacity 1s, visibility 0s 1s;
 }
@@ -39,18 +149,15 @@ body {
 .pane.show {
     visibility: visible;
     opacity: 1;
-    transition: opacity 1s;
+    z-index: 100;
+    transition: opacity 1s, visibility 0s 0s, z-index 0s 0s;
 }
 
-.pane .content {
-    width: 100%;
-    height: 100%;
+.pane.show .content, .pane.show .gallery, .pane.show .sources {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s, visibility 0s 0s;
 }
-
-.floater {
-    height: 50%;
-}
-
 
 
 
@@ -67,27 +174,18 @@ body {
  *********************/
 
 
-.pane1 {
+.pane0 {
     background-image: radial-gradient(ellipse closest-corner at 50% 50%, rgb(255, 185, 55) 0%, rgb(255, 165, 0) 100%);
 }
 
-.pane1 .content {
-    transform: translateY(-100px);
-    transition: transform 1s;
-}
 
-.pane1.show .content {
-    transform: translateY(0);
-}
-
-
-.pane1-inner {
+.pane0-inner {
     width: 60%;
     height: 300px;
     margin: -150px auto 0 auto;
 }
 
-.pane1-inner-title {
+.pane0-inner-title {
     margin-bottom: 0;
     font-size: 60px;
     font-family: "Bree Serif";
@@ -96,7 +194,7 @@ body {
     transition: opacity .8s;
 }
 
-.pane1-inner-subtitle {
+.pane0-inner-subtitle {
     margin-top: 0;
     font-size: 35px;
     font-weight: 500;
@@ -104,23 +202,19 @@ body {
     transition: opacity .8s;
 }
 
-.pane1-inner-title.hidden, .pane1-inner-subtitle.hidden {
-    opacity: 0;
-}
-
-.pane1-start {
+.pane0-start {
     position: relative;
     width: 250px;
     margin: 0 auto;
 }
 
-.pane1-start-text {
+.pane0-start-text {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    max-width: 240px;
+    max-width: 0px;
     margin: 0;
     line-height: 58px;
     font-size: 30px;
@@ -129,12 +223,12 @@ body {
     transition: max-width .7s;
 }
 
-.pane1-start-text.hidden {
-    max-width: 0px;
-    transition: max-width .8s, display 0s .8s;
+.pane0-start-text.show {
+    max-width: 240px;
+    transition: max-width .8s;
 }
 
-.pane1-start-button {
+.pane0-start-button {
     position: relative;   /* to display it above pane1-start-text */
     width: 117px;
     height: 58px;
@@ -153,41 +247,56 @@ body {
     transition: color .1s, background .1s, width .8s, padding .8s, margin-left .8s;
 }
 
-.pane1-start-button:hover {
+.pane0-start-button:hover {
     color: #FFB42B;
     background: white;
 }
 
-.pane1-start-button.cursor {
+.pane0-start-button.cursor {
     width: 0px;
     padding: 5px 0;
     margin-left: 0;
     color: #FFB42B;
 }
 
-.pane1-start-button.to-right {
+.pane0-start-button.to-right {
     margin-left: 240px;
 }
 
 
-
-
-
-
-
-
-
-.pane2 {
-    background: #313131;
-    color: white;
-    opacity: 0;
+.pane0-inner-title, .pane0-start-subtitle {
+    -webkit-animation: fade-out 1s 2s;
 }
 
-.pane2 .content p {
+.pane0.show .pane0-inner-title, .pane0.show .pane0-inner-subtitle {
+    -webkit-animation: fade-in 1s 1s;
+}
+
+.pane0-start-button {
+    -webkit-animation: fade-out-scale 1s 1s;
+}
+
+.pane0.show .pane0-start-button {
+    -webkit-animation: fade-in-scale 1s 2s;
+}
+
+
+
+
+
+
+
+
+.pane1 {
+    background: #313131;
+    color: white;
+}
+
+.pane1 .content p {
     opacity: 0;
     transition: opacity .5s;
 }
 
-.pane2 .content p.show {
+.pane1 .content p {
     opacity: 1;
 }
