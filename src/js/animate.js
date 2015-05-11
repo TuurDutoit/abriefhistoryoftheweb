@@ -9,15 +9,20 @@ define(["X"], function(X) {
         
             var $current = X($panes.get(currentIndex));
             var $next = X($panes.get(nextIndex));
+            var isIntro = currentIndex === 0 && $current.hasClass("special-animate");
 
-
-            if(currentIndex === 0) {
+            
+            if(isIntro) {
+                $current.addClass("special-out");
+                var timeout = 1000;
+            }
+            else if(currentIndex === 0) {
                 $current.removeClass("special-animate animate-in").addClass("animate-out");
                 var timeout = 1200;
             }
             else if(currentIndex === 1) {
                 $current.removeClass("animate-in").addClass("animate-out");
-                var timeout = 0;
+                var timeout = 1000;
             }
             else {
                 $current.removeClass("animate-in").addClass("animate-out");
@@ -28,22 +33,20 @@ define(["X"], function(X) {
             setTimeout(function() {
                 $current.removeClass("show");
                 $next.addClass("show");
+                
+                if(isIntro) {
+                    $current.removeClass("special-out special-animate");
+                }
 
                 setTimeout(function() {
                     $next.addClass("animate-in");
-                    
-                    if(nextIndex === 1) {
-                        setTimeout(function() {
-                            navigation.next();
-                        }, 22000);
-                    }
                 }, 1000);
             }, timeout);
             
         },
         
         start: function() {
-            $pane0.addClass("special-animate");
+            $pane0.removeClass("animate-in animate-out").addClass("special-animate");
         }
         
         

@@ -34,18 +34,14 @@
     }
 }
 
-@-webkit-keyframes fade-in-out-scale-long {
+@-webkit-keyframes fade-in-scale-short {
     0% {
         opacity: 0;
         transform: scale(.9);
     }
-    10%, 90% {
+    100% {
         opacity: 1;
         transform: scale(1);
-    }
-    100% {
-        opacity: 0;
-        transform: scale(.9);
     }
 }
 
@@ -65,6 +61,13 @@
         opacity: 1;
         transform: scale(1);
     }
+    100% {
+        opacity: 0;
+        transform: scale(.8);
+    }
+}
+
+@-webkit-keyframes other-fade-out-scale {
     100% {
         opacity: 0;
         transform: scale(.8);
@@ -297,6 +300,10 @@ body {
     -webkit-animation: uncover-text .8s 2.4s forwards;
 }
 
+.pane0.special-out .pane0-start {
+    -webkit-animation: fade-out 1s;
+}
+
 
 
 
@@ -309,10 +316,15 @@ body {
     color: white;
 }
 
-.pane1 .content p {
+.pane1 p {
     display: block;
     opacity: 0;
     font-size: 25px;
+    transition: opacity 0s 1s;
+}
+
+.pane1.show p {
+    opacity: 1;
 }
 
 .pane1 p:first-child {
@@ -335,7 +347,14 @@ body {
     text-align: center;
 }
 
+.pane1.animate-in p {
+    opacity: 1;
+}
 
+.pane1.animate-out p {
+    opacity: 0;
+    transition: opacity 1s;
+}
 
 .pane1.animate-in p:first-child {
     -webkit-animation: fade-in-out-scale 4s 1s both;
@@ -346,5 +365,6 @@ body {
 }
 
 .pane1.animate-in p:last-child {
-    -webkit-animation: fade-in-out-scale-long 10s 11s both;
+    opacity: 1;
+    -webkit-animation: fade-in-scale-short 1s 11s both;
 }
