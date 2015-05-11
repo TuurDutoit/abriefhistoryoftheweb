@@ -5,24 +5,12 @@ define(["X", "animate"], function(X, animate) {
     var max = 2;
     var animating = false;
     
-    var navigation = {
-        animate: function() {
-            animating = true;
-            return this;
-        },
-        done: function() {
-            animating = false;
-            return this;
-        },
-        defer: function(time) {
-            setTimeout(this.done, time);
-            return this;
-        }
-    }
-    
     var go = function(i) {
         if(!animating && i !== index && index <= max) {
-            animate(index, i, navigation);
+            animating = true;
+            setTimeout(function(){ animating = false; }, 1000);
+            
+            animate.normal(index, i, navigation);
             index = i;
         }
     }
@@ -36,10 +24,11 @@ define(["X", "animate"], function(X, animate) {
     }
     
     
-    navigation.go = go;
-    navigation.next = next;
-    navigation.back = back;
-    
+    var navigation = {
+        go: go,
+        next: next,
+        back: back
+    }    
     
     
     
@@ -82,7 +71,7 @@ define(["X", "animate"], function(X, animate) {
     
     
     X(".pane0-start-button").on("click", function() {
-        next();
+        animate.start();
     });
     
     
