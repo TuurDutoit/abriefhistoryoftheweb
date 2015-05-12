@@ -301,7 +301,7 @@ body {
 }
 
 .pane0.special-out .pane0-start {
-    -webkit-animation: fade-out 1s;
+    -webkit-animation: fade-out-scale 1s;
 }
 
 
@@ -320,11 +320,12 @@ body {
     display: block;
     opacity: 0;
     font-size: 25px;
-    transition: opacity 0s 1s;
+    transition: opacity 1s;
 }
 
-.pane1.show p {
+.pane1 .content {
     opacity: 1;
+    transition: opacity 1s;
 }
 
 .pane1 p:first-child {
@@ -347,24 +348,18 @@ body {
     text-align: center;
 }
 
-.pane1.animate-in p {
-    opacity: 1;
-}
-
-.pane1.animate-out p {
-    opacity: 0;
-    transition: opacity 1s;
-}
-
 .pane1.animate-in p:first-child {
-    -webkit-animation: fade-in-out-scale 4s 1s both;
+    -webkit-animation: fade-in-out-scale 4s 1s;
 }
 
 .pane1.animate-in p:nth-child(2) {
-    -webkit-animation: fade-in-out-scale 4s 6s both;
+    -webkit-animation: fade-in-out-scale 4s 6s;
 }
 
 .pane1.animate-in p:last-child {
-    opacity: 1;
-    -webkit-animation: fade-in-scale-short 1s 11s both;
+    -webkit-animation: fade-in-scale-short 1s 11s forwards;
+}
+
+.pane1.animate-out .content {
+    opacity: 0;
 }

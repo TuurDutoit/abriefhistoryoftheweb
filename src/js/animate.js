@@ -17,15 +17,15 @@ define(["X"], function(X) {
                 var timeout = 1000;
             }
             else if(currentIndex === 0) {
-                $current.removeClass("special-animate animate-in").addClass("animate-out");
-                var timeout = 1200;
+                $current.addClass("animate-out");
+                var timeout = 1000;
             }
             else if(currentIndex === 1) {
-                $current.removeClass("animate-in").addClass("animate-out");
+                $current.addClass("animate-out");
                 var timeout = 1000;
             }
             else {
-                $current.removeClass("animate-in").addClass("animate-out");
+                $current.addClass("animate-out");
                 var timeout = 2400;
             }
 
@@ -34,9 +34,7 @@ define(["X"], function(X) {
                 $current.removeClass("show");
                 $next.addClass("show");
                 
-                if(isIntro) {
-                    $current.removeClass("special-out special-animate");
-                }
+                $current.removeClass("animate-in animate-out special-animate special-out");
 
                 setTimeout(function() {
                     $next.addClass("animate-in");

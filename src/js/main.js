@@ -8,3 +8,7 @@ requirejs.config({
 
 
 require(["navigation"]);
+
+require(["X"], function(X) {
+    X(".pane0").addClass("animate-in");
+});
