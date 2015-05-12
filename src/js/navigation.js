@@ -76,4 +76,9 @@ define(["X", "animate"], function(X, animate) {
     
     
     
+    
+    return navigation;
+    
+    
+    
 });

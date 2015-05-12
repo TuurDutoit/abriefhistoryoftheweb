@@ -137,6 +137,36 @@ body {
     height: 50%;
 }
 
+.side-nav {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    z-index: 200;
+    margin-top: 22px;
+}
+
+.side-nav .dot {
+    width: 9px;
+    height: 9px;
+    background: white;
+    margin: 15px 0;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background .6s;
+}
+
+.side-nav .dot:first-child {
+    margin-top: 0;
+}
+
+.side-nav .dot:last-child {
+    margin-bottom: 0;
+}
+
+.side-nav .dot:hover {
+    background: #afafaf;
+}
+
 
 
 
@@ -164,13 +194,13 @@ body {
     transition: opacity 1s, visibility 0s 0s;
 }
 
-.pane .gallery, .pane .sources {
+.pane .body, .pane .gallery, .pane .sources {
     visibility: hidden;
     opacity: 0;
     transition: opacity 1s, visibility 0s 1s;
 }
 
-.pane .gallery.show, .pane .sources.show {
+.pane .body.show, .pane .gallery.show, .pane .sources.show {
     visibility: visible;
     opacity: 1;
     transition: opacity 1s, visibility 0s 1s;
@@ -192,7 +222,7 @@ body {
 
 
 .pane0 {
-    background-image: radial-gradient(ellipse closest-corner at 50% 50%, rgb(255, 185, 55) 0%, rgb(255, 165, 0) 100%);
+    background: radial-gradient(ellipse closest-corner at 50% 50%, rgb(255, 185, 55) 0%, rgb(255, 165, 0) 100%);
 }
 
 
@@ -337,18 +367,18 @@ body {
 
 .pane1 p:first-child {
     width: 200px;
-    margin: 20px;
+    margin: 30px;
 }
 
 .pane1 p:nth-child(2) {
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 30px;
 }
 
 .pane1 p:last-child {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 50%;
     width: 450px;
     margin-left: -225px;
@@ -369,4 +399,21 @@ body {
 
 .pane1.animate-out .content {
     opacity: 0;
+}
+
+
+
+
+
+
+.pane2 {
+    background: radial-gradient(ellipse closest-corner at 50% 50%, rgb(255, 185, 55) 0%, rgb(255, 165, 0) 100%);
+}
+
+.pane2 .content .date {
+    width: 100px;
+    margin: 30px auto;
+    font-size: 45px;
+    font-weight: bold;
+    text-shadow: 2px 3px grey;
 }

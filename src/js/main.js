@@ -7,7 +7,7 @@ requirejs.config({
 });
 
 
-require(["navigation"]);
+require(["navigation", "sidenav"]);
 
 require(["X"], function(X) {
     X(".pane0").addClass("animate-in");
