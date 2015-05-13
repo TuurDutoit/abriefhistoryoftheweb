@@ -1,4 +1,4 @@
-define(["X", "animate"], function(X, animate) {
+define(["jquery", "animate"], function($, animate) {
     
     
     var index = 0;
@@ -33,7 +33,7 @@ define(["X", "animate"], function(X, animate) {
     
     
     
-    X(document).on("keydown", function(e) {
+    $(document).on("keydown", function(e) {
         switch(e.keyCode) {
             case 37:
             case 38:
@@ -58,7 +58,7 @@ define(["X", "animate"], function(X, animate) {
     });
     
     
-    X(".navigation").on("click", function(e) {
+    $(".navigation").on("click", function(e) {
         var $target = X(e.target);
         var $parent = $target.parent();
         var children = $parent.children();
@@ -70,7 +70,7 @@ define(["X", "animate"], function(X, animate) {
     });
     
     
-    X(".pane0-start-button").on("click", function() {
+    $(".pane0-start-button").on("click", function() {
         animate.start();
     });
     

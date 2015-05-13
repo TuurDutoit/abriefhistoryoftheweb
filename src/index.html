@@ -7,13 +7,14 @@
         <meta name="keywords" content="history story world wide web internet CERN" />
         <title>A Brief History of the Web</title>
         
+        <link rel="stylesheet" type="text/css" href="css/slick.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
     <body>
         <nav class="side-nav">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+            <div class="dot" title="Go to: Home"></div>
+            <div class="dot" title="Go to: Part 1"></div>
+            <div class="dot" title="Go to: Part 2"></div>
         </nav>
         <main>
             <section class="pane pane0 show">
@@ -40,19 +41,23 @@
                 </div>
             </section>
             <section class="pane pane2">
-                <div class="content">
-                    <div class="date">19xx</div>
-                    <img src="img/phone.svg" />
-                    <div>Alexander Graham Bell invents the telephone.</div>
+                <div class="content" style="display:none;">
+                    <div class="date">1876</div>
+                    <img src="img/phone.gif" class="image" />
+                    <div class="title">Alexander Graham Bell invents the telephone.</div>
                 </div>
-                <ul class="sources">
-                    <li><a href="en.wikipedia.com/Alexander_Graham_Bell">http://en.wikipedia.com/Alexander_Graham_Bell</a></li>
-                    <li><a href="bell-labs.com">http://bell-labs.com</a></li>
-                </ul>
+                <div class="sources">
+                    <h1 class="title">Sources</h1>
+                    <ul>
+                        <li><a href="http://en.wikipedia.com/Alexander_Graham_Bell" target="_blank">http://en.wikipedia.com/Alexander_Graham_Bell</a></li>
+                        <li><a href="http://bell-labs.com" target="_blank">http://bell-labs.com</a></li>
+                    </ul>
+                </div>
                 <div class="body">
+                    <h1 class="title">More info</h1>
                     <p>On 7 march 1876, Alexander Graham Bell registers a patent for "the method of, and apparatus for, transmitting vocal or other sounds telegraphically...". In simpler terms: the telephone. He wasn't the only one working on it, of course, but he was the first to get one working and to register a patent.<br />In 1877, he founded the Bell Telephone Company, the company that would run the phone lines for the forseeable future and would - as we now know - play a vital role in our story.</p>
                 </div>
-                <div class="gallery">
+                <div class="gallery show">
                     <div class="photo">
                         <h1 class="title">Alexander Graham Bell</h1>
                         <img src="img/agb.jpg" />
@@ -65,7 +70,7 @@
             </section>
         </main>
         
-        
+        <script type="text/javascript" src="js/deps/jquery.min.js"></script>
         <script type="text/javascript" src="js/deps/require.min.js" data-main="js/main.js"></script>
     </body>
 </html>

@@ -1,20 +1,20 @@
-define(["X"], function(X) {
+define(["jquery"], function($) {
     
-    var $panes = X(".pane");
-    var $pane0 = X(".pane0");
+    var $panes = $(".pane");
+    var $pane0 = $(".pane0");
     
     
     return {
         normal: function(currentIndex, nextIndex, navigation) {
         
-            var $current = X($panes.get(currentIndex));
-            var $next = X($panes.get(nextIndex));
+            var $current = $($panes.get(currentIndex));
+            var $next = $($panes.get(nextIndex));
             var isIntro = currentIndex === 0 && $current.hasClass("special-animate");
 
             
             if(isIntro) {
                 $current.addClass("special-out");
-                var timeout = 1000;
+                var timeout = 1200;
             }
             else if(currentIndex === 0) {
                 $current.addClass("animate-out");
