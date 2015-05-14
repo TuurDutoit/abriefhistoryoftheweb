@@ -48,7 +48,7 @@ define(["jquery", "elements", "start"], function($, elements, start) {
     });
     
     
-    $(".pane0-start-button").on("click", function() {
+    $(".content-0 .start-button").on("click", function() {
         start();
     });
     

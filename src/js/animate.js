@@ -19,13 +19,10 @@ define(["jquery", "events", "elements", "sidenav", "start"], function($, events,
         switch(activeID.type) {
             case "content":
                 activeTimeout += 3*800;
-                if(nextID.type !== "content") {
-                    activeTimeout += 2*800;
-                }
                 break;
             case "more":
             case "sources":
-                activeTimeout += 2*800;
+                activeTimeout += 3*800;
                 break;
             case "gallery":
                 activeTimeout += 4*800;

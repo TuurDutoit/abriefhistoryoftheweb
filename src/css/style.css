@@ -149,10 +149,6 @@ body {
     bottom: 0;
 }
 
-.pane > * {
-    opacity: 0;
-}
-
 .pane .close {
     display: block;
     position: absolute;
@@ -173,6 +169,14 @@ body {
 
 .gallery {
     background: #313131;
+}
+
+.content .date, .content .image, .content .title,
+.sources .title, .sources ul, .sources .close,
+.more .title, .more p, .more .close,
+.gallery .photo img, .gallery .photo .title,
+.gallery .arrows, .gallery .close {
+    opacity: 0;
 }
 
 .content .date {
@@ -264,9 +268,17 @@ body {
     background: #313131;
 }
 
-.gallery .slick-list, .gallery .slick-track, .gallery .photo {
+.gallery .inner, .gallery .slick-list, .gallery .slick-track, .gallery .photo {
     width: 100%;
     height: 100%;
+}
+
+.gallery .arrows {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .gallery .photo {
@@ -419,11 +431,19 @@ body {
     -webkit-animation: fade-in-scale .8s .8s both;
 }
 
+.more.animate-in .close {
+    -webkit-animation: fade-in-scale .8s 1.6s both;
+}
+
 .more.animate-out .title {
-    -webkit-animation: fade-out-scale .8s .8s both;
+    -webkit-animation: fade-out-scale .8s 1.6s both;
 }
 
 .more.animate-out p {
+    -webkit-animation: fade-out-scale .8s .8s both;
+}
+
+.more.animate-out .close {
     -webkit-animation: fade-out-scale .8s both;
 }
 
@@ -435,19 +455,23 @@ body {
     -webkit-animation: fade-in-scale .8s .8s both;
 }
 
+.sources.animate-in .close {
+    -webkit-animation: fade-in-scale .8s 1.6s both;
+}
+
 .sources.animate-out .title {
-    -webkit-animation: fade-out-scale .8s .8s both;
+    -webkit-animation: fade-out-scale .8s 1.6s both;
 }
 
 .sources.animate-out ul {
-    -webkit-animation: fade-out-scale .8s both;
+    -webkit-animation: fade-out-scale .8s .8s both;
 }
 
 .sources.animate-out .close {
-    
+    -webkit-animation: fade-out-scale .8s both;
 }
 
-.gallery.animate-in .slick-list {
+.gallery.animate-in .slick-list img {
     -webkit-animation: fade-in-scale .8s both;
 }
 
@@ -455,7 +479,8 @@ body {
     -webkit-animation: fade-in-scale .8s .8s both;
 }
 
-.gallery.animate-in .arrow {
+.gallery.animate-in .arrows {
+    opacity: 1;
     -webkit-animation: fade-in-scale .8s 1.6 both;
 }
 
@@ -463,7 +488,7 @@ body {
     -webkit-animation: fade-in-scale .8s 2.4s both;
 }
 
-.gallery.animate-out .slick-list {
+.gallery.animate-out .slick-list img {
     -webkit-animation: fade-out-scale .8s 2.4s both;
 }
 
@@ -471,7 +496,8 @@ body {
     -webkit-animation: fade-out-scale .8s 1.6s both;
 }
 
-.gallery.animate-out .arrow {
+.gallery.animate-out .arrows {
+    opacity: 0;
     -webkit-animation: fade-out-scale .8s .8s both;
 }
 

@@ -1,4 +1,4 @@
-define(["jquery", "elements"], function($, elements) {
+define(["jquery"], function($) {
     
     var $pane = $(".content-0");
     
