@@ -127,15 +127,15 @@ body {
     bottom: 0;
 }
 
-.pane .content, .pane .gallery, .pane .sources {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.content, .sources, .more {
+    background: radial-gradient(ellipse closest-corner at 50% 50%, rgb(255, 185, 55) 0%, rgb(255, 165, 0) 100%);
 }
 
-.pane .content .date {
+.gallery {
+    background: #313131;
+}
+
+.content .date {
     width: 100px;
     margin: 30px auto;
     font-size: 45px;
@@ -144,7 +144,7 @@ body {
     text-shadow: 2px 3px grey;
 }
 
-.pane .content .title {
+.content:not(.content-0) .title {
     position: absolute;
     bottom: 30px;
     left: 30px;
@@ -152,7 +152,7 @@ body {
     color: #4c4c4c;
 }
 
-.pane .content .image {
+.content .image {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -160,35 +160,101 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.pane .sources .title, .pane .body .title {
+.sources .title, .pane .body .title {
     text-align: center;
     font-size: 45px;
     color: white;
     text-shadow: 2px 3px grey;
 }
 
-.pane .sources ul {
+.sources ul {
     font-size: 25px;
     color: grey;
 }
 
-.pane .sources ul li {
+.sources ul li {
     margin-top: 10px;
 }
 
-.pane .sources ul li:first-child {
+.sources ul li:first-child {
     margin-top: 0;
 }
 
-.pane .sources ul a {
+.sources ul a {
     color: #005AFF;
 }
 
-.pane .body p {
+.more p {
     margin: 0 10%;
     line-height: 35px;
     font-size: 20px;
     color: #2D2D2D;
+}
+
+.gallery {
+    background: #313131;
+}
+
+.gallery .slick-list, .gallery .slick-track, .gallery .photo {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery .photo {
+    position: relative;
+    text-align: center;
+}
+
+.gallery .photo .title {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    margin: 0;
+    font-size: 25px;
+    text-align: left;
+    color: white;
+    text-shadow: 0 0 20px #313131;
+}
+
+.gallery .photo img {
+    display: inline;
+}
+
+.gallery .arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    color: white;
+    text-shadow: 0 0 20px #313131;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.gallery .close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    text-shadow: 0 0 20px #313131;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.gallery .close:hover {
+    transform: scale(1.2);
+}
+
+.gallery .arrow:hover {
+    transform: scale(1.2);
+}
+
+.gallery .arrow-left {
+    left: 30px;
+}
+
+.gallery .arrow-right {
+    right: 30px;
 }
 
 .floater {
@@ -221,8 +287,8 @@ body {
     margin-bottom: 0;
 }
 
-.side-nav .dot:hover {
-    background: #cbcbcb;
+.side-nav .dot:hover, .side-nav .dot.selected {
+    background: grey;
 }
 
 
@@ -238,33 +304,22 @@ body {
     visibility: hidden;
     opacity: 0;
     z-index: 1;
-    transition: opacity 1s, visibility 0s 1s, z-index 0s 1s;
 }
 
 .pane.show {
     visibility: visible;
     opacity: 1;
     z-index: 100;
-    transition: opacity 1s, visibility 0s 0s, z-index 0s 0s;
 }
 
-.pane.show .content {
-    visibility: visible;
-    opacity: 1;
+.pane.show-in {
     transition: opacity 1s, visibility 0s 0s;
 }
 
-.pane .body, .pane .gallery, .pane .sources {
-    visibility: hidden;
-    opacity: 0;
+.pane.show-out {
     transition: opacity 1s, visibility 0s 1s;
 }
 
-.pane .body.show, .pane .gallery.show, .pane .sources.show {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 1s, visibility 0s 1s;
-}
 
 
 
@@ -281,18 +336,14 @@ body {
  *********************/
 
 
-.pane0 {
-    background: radial-gradient(ellipse closest-corner at 50% 50%, rgb(255, 185, 55) 0%, rgb(255, 165, 0) 100%);
-}
 
-
-.pane0-inner {
+.content-0 .inner {
     width: 60%;
     height: 300px;
     margin: -150px auto 0 auto;
 }
 
-.pane0-inner-title {
+.content-0 .title {
     opacity: 0;
     margin-bottom: 0;
     font-size: 60px;
@@ -301,7 +352,7 @@ body {
     text-shadow: 2px 3px grey;
 }
 
-.pane0-inner-subtitle {
+.content-0 .subtitle {
     opacity: 0;
     margin-top: 0;
     font-size: 35px;
@@ -309,13 +360,13 @@ body {
     color: #666666;
 }
 
-.pane0-start {
+.content-0 .start {
     position: relative;
     width: 250px;
     margin: 0 auto;
 }
 
-.pane0-start-text {
+.content-0 .start-text {
     position: absolute;
     top: 0;
     left: 0;
@@ -329,7 +380,7 @@ body {
     overflow: hidden;
 }
 
-.pane0-start-button {
+.content-0 .start-button {
     display: inline-block;
     opacity: 0;
     position: relative;   /* to display it above pane1-start-text */
@@ -350,12 +401,12 @@ body {
     transition: color .1s, background .1s;
 }
 
-.pane0-start-button:hover {
+.content-0 .start-button:hover {
     color: #FFB42B;
     background: white;
 }
 
-.pane0 .top-controls {
+.content-0 .controls {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -363,41 +414,41 @@ body {
     text-align: center;
 }
 
-.pane0.animate-in .pane0-inner-title, .pane0.animate-in .pane0-inner-subtitle {
+.content-0.animate-in .title, .content-0.animate-in .subtitle {
     -webkit-animation: fade-in-scale .6s forwards;
 }
 
-.pane0.animate-in .pane0-start-button {
+.content-0.animate-in .start-button {
     -webkit-animation: fade-in-scale .6s .6s forwards;
 }
 
-.pane0.animate-out .pane0-inner-title, .pane0.animate-out .pane0-inner-subtitle {
+.content-0.animate-out .title, .content-0.animate-out .subtitle {
     -webkit-animation: fade-out-scale .6s .6s both;
 }
 
-.pane0.animate-out .pane0-start-button {
+.content-0.animate-out .start-button {
     -webkit-animation: fade-out-scale .6s both;
 }
 
-.pane0.special-animate .pane0-inner-title, .pane0.special-animate .pane0-inner-subtitle {
+.content-0.special-animate .title, .content-0.special-animate .subtitle {
     opacity: 1;
     -webkit-animation: fade-out-scale .8s both;
 }
 
-.pane0.special-animate .pane0-start-button {
+.content-0.special-animate .start-button {
     opacity: 1;
     -webkit-animation: start-cursor 2.4s .8s forwards;
 }
 
-.pane0.special-animate .pane0-start-button span {
+.content-0.special-animate .start-button span {
     -webkit-animation: fade-out .6s forwards;
 }
 
-.pane0.special-animate .pane0-start-text {
+.content-0.special-animate .start-text {
     -webkit-animation: uncover-text .8s 2.4s forwards;
 }
 
-.pane0.special-out .pane0-start {
+.content-0.special-out .start {
     -webkit-animation: fade-out-scale 1s forwards;
 }
 
@@ -408,35 +459,36 @@ body {
 
 
 
-.pane1 {
+.content-1 {
     background: #313131;
     color: white;
 }
 
-.pane1 p {
+.content-1 .inner {
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s;
+}
+
+.content-1 p {
     display: block;
     opacity: 0;
     font-size: 25px;
     transition: opacity 1s;
 }
 
-.pane1 .content {
-    opacity: 1;
-    transition: opacity 1s;
-}
-
-.pane1 p:first-child {
+.content-1 p:first-child {
     width: 200px;
     margin: 30px;
 }
 
-.pane1 p:nth-child(2) {
+.content-1 p:nth-child(2) {
     position: absolute;
     top: 50%;
-    right: 30px;
+    right: 49px;
 }
 
-.pane1 p:last-child {
+.content-1 p:last-child {
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -445,27 +497,18 @@ body {
     text-align: center;
 }
 
-.pane1.animate-in p:first-child {
+.content-1.animate-in p:first-child {
     -webkit-animation: fade-in-out-scale 4s 1s;
 }
 
-.pane1.animate-in p:nth-child(2) {
+.content-1.animate-in p:nth-child(2) {
     -webkit-animation: fade-in-out-scale 4s 6s;
 }
 
-.pane1.animate-in p:last-child {
+.content-1.animate-in p:last-child {
     -webkit-animation: fade-in-scale-short 1s 11s forwards;
 }
 
-.pane1.animate-out .content {
+.content-1.animate-out .inner {
     opacity: 0;
-}
-
-
-
-
-
-
-.pane2 {
-    background: radial-gradient(ellipse closest-corner at 50% 50%, rgb(255, 185, 55) 0%, rgb(255, 165, 0) 100%);
 }

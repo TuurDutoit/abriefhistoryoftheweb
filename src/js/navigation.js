@@ -1,35 +1,25 @@
-define(["jquery", "animate"], function($, animate) {
+define(["jquery", "elements", "start"], function($, elements, start) {
     
     
-    var index = 0;
-    var max = 2;
-    var animating = false;
     
-    var go = function(i) {
-        if(!animating && i !== index && index <= max) {
-            animating = true;
-            setTimeout(function(){ animating = false; }, 1000);
+    var timeout = false;
+    
+    var go = function(index) {
+        if(!timeout && elements.activeType() === "content") {
+            timeout = true;
+            setTimeout(function(){ timeout = false; }, 500);
             
-            animate.normal(index, i, navigation);
-            index = i;
+            elements.activeIndex(index);
         }
     }
     
     var next = function() {
-        go(index + 1);
+        go(elements.activeIndex() + 1);
     }
     
     var back = function() {
-        go(index - 1);
+        go(elements.activeIndex() - 1);
     }
-    
-    
-    var navigation = {
-        go: go,
-        next: next,
-        back: back
-    }    
-    
     
     
     
@@ -45,11 +35,11 @@ define(["jquery", "animate"], function($, animate) {
                 break;
         }
     })
-    .on("scroll", function(e) {
-        if(e.deltaY > 0) {
+    .on("wheel", function(e) {
+        if(e.originalEvent.deltaY > 0) {
             next();
         }
-        else if(e.deltaY < 0) {
+        else if(e.originalEvent.deltaY < 0) {
             back();
         }
     })
@@ -58,26 +48,9 @@ define(["jquery", "animate"], function($, animate) {
     });
     
     
-    $(".navigation").on("click", function(e) {
-        var $target = X(e.target);
-        var $parent = $target.parent();
-        var children = $parent.children();
-        var index = children.indexOf(e.target);
-        
-        if(index > -1) {
-            go(index);
-        }
-    });
-    
-    
     $(".pane0-start-button").on("click", function() {
-        animate.start();
+        start();
     });
-    
-    
-    
-    
-    return navigation;
     
     
     

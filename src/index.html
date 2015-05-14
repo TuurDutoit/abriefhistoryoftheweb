@@ -7,70 +7,66 @@
         <meta name="keywords" content="history story world wide web internet CERN" />
         <title>A Brief History of the Web</title>
         
-        <link rel="stylesheet" type="text/css" href="css/slick.css" />
+        <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/lib/slick.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
     <body>
         <nav class="side-nav">
-            <div class="dot" title="Go to: Home"></div>
+            <div class="dot selected" title="Go to: Home"></div>
             <div class="dot" title="Go to: Part 1"></div>
             <div class="dot" title="Go to: Part 2"></div>
         </nav>
         <main>
-            <section class="pane pane0 show">
-                <div class="content">
-                    <div class="floater"></div>
-                    <div class="pane0-inner">
-                        <h1 class="pane0-inner-title">A Brief History of the Web</h1>
-                        <h3 class="pane0-inner-subtitle">A story about communication.</h3>
-                        <div class="pane0-start">
-                            <div class="pane0-start-text">Once upon a time...</div>
-                            <a class="pane0-start-button"><span>START</span></a>
-                        </div>
-                    </div>
-                    <div class="top-controls">
-                        scroll, swipe, keys
+            <section class="pane content content-0 show">
+                <div class="floater"></div>
+                <div class="inner">
+                    <h1 class="title">A Brief History of the Web</h1>
+                    <h3 class="subtitle">A story about communication.</h3>
+                    <div class="start">
+                        <div class="start-text">Once upon a time...</div>
+                        <a class="start-button"><span>START</span></a>
                     </div>
                 </div>
+                <div class="controls">
+                    scroll, swipe, keys
+                </div>
             </section>
-            <section class="pane pane1">
-                <div class="content">
+            <section class="pane content content-1">
+                <div class="inner">
                     <p>There was nothing.</p>
                     <p>Well, no computers anyway.</p>
                     <p>Data was collected and processed by hand,<br /> text was typed with a typewriter<br /> and letters and telegram were the de-facto communication methods.<br /> Until...</p>
                 </div>
             </section>
-            <section class="pane pane2">
-                <div class="content" style="display:none;">
-                    <div class="date">1876</div>
-                    <img src="img/phone.gif" class="image" />
-                    <div class="title">Alexander Graham Bell invents the telephone.</div>
+            <section class="pane content content-2">
+                <div class="date">1876</div>
+                <img src="img/phone.gif" class="image" />
+                <div class="title">Alexander Graham Bell invents the telephone.</div>
+            </section>
+            <section class="pane sources sources-2">
+                <h1 class="title">Sources</h1>
+                <ul>
+                    <li><a href="http://en.wikipedia.com/Alexander_Graham_Bell" target="_blank">http://en.wikipedia.com/Alexander_Graham_Bell</a></li>
+                    <li><a href="http://bell-labs.com" target="_blank">http://bell-labs.com</a></li>
+                </ul>
+            </section>
+            <section class="pane more more-2">
+                <h1 class="title">More info</h1>
+                <p>On 7 march 1876, Alexander Graham Bell registers a patent for "the method of, and apparatus for, transmitting vocal or other sounds telegraphically...". In simpler terms: the telephone. He wasn't the only one working on it, of course, but he was the first to get one working and to register a patent.<br />In 1877, he founded the Bell Telephone Company, the company that would run the phone lines for the forseeable future and would - as we now know - play a vital role in our story.</p>
+            </section>
+            <section class="pane gallery gallery-2">
+                <div class="photo">
+                    <h1 class="title">Alexander Graham Bell</h1>
+                    <img src="img/alexander-graham-bell.jpg" />
                 </div>
-                <div class="sources">
-                    <h1 class="title">Sources</h1>
-                    <ul>
-                        <li><a href="http://en.wikipedia.com/Alexander_Graham_Bell" target="_blank">http://en.wikipedia.com/Alexander_Graham_Bell</a></li>
-                        <li><a href="http://bell-labs.com" target="_blank">http://bell-labs.com</a></li>
-                    </ul>
-                </div>
-                <div class="body">
-                    <h1 class="title">More info</h1>
-                    <p>On 7 march 1876, Alexander Graham Bell registers a patent for "the method of, and apparatus for, transmitting vocal or other sounds telegraphically...". In simpler terms: the telephone. He wasn't the only one working on it, of course, but he was the first to get one working and to register a patent.<br />In 1877, he founded the Bell Telephone Company, the company that would run the phone lines for the forseeable future and would - as we now know - play a vital role in our story.</p>
-                </div>
-                <div class="gallery show">
-                    <div class="photo">
-                        <h1 class="title">Alexander Graham Bell</h1>
-                        <img src="img/agb.jpg" />
-                    </div>
-                    <div class="photo">
-                        <h1 class="title">A. G. Bell showcasing his telephone</h1>
-                        <img src="img/agb-showing-telephone.jpg" />
-                    </div>
+                <div class="photo">
+                    <h1 class="title">A. G. Bell showcasing his telephone</h1>
+                    <img src="img/agb-showing-telephone.jpg" />
                 </div>
             </section>
         </main>
         
-        <script type="text/javascript" src="js/deps/jquery.min.js"></script>
-        <script type="text/javascript" src="js/deps/require.min.js" data-main="js/main.js"></script>
+        <script type="text/javascript" src="js/lib/require.min.js" data-main="js/main.js"></script>
     </body>
 </html>

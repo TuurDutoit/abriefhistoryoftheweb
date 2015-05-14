@@ -1,14 +1,14 @@
 requirejs.config({
     baseUrl: "js",
     paths: {
-        jquery: "deps/jquery.min"
+        jquery: "lib/jquery.min"
     }
 });
 
 
-require(["deps/slick.min"])
-require(["navigation", "sidenav", "gallery"]);
+require(["lib/slick.min"]);
+require(["events", "elements", "animate", "navigation", "sidenav", "gallery"]);
 
 require(["jquery"], function($) {
-    $(".pane0").addClass("animate-in");
+    $(".content-0").addClass("animate-in");
 });
