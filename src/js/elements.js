@@ -2,10 +2,7 @@ define(["jquery", "events"], function($, events) {
     
     var $panes = $(".pane");
     var panes = $panes.toArray().map($);
-    var contents = $(".content").toArray().map($);
-    var mores = $(".more").toArray().map($);
-    var sources = $(".sources").toArray().map($);
-    var galleries = $(".gallery").toArray().map($);
+    
     
     var rid = /(content|more|sources|gallery)-[0-9]+/;
     var rtypes = /^(content|more|sources|gallery)/;
@@ -17,16 +14,16 @@ define(["jquery", "events"], function($, events) {
             return panes[index];
         },
         getContent: function(index) {
-            return contents[index];
+            return $(".content-"+index);
         },
         getMore: function(index) {
-            return mores[index];
+            return $(".more-"+index);
         },
         getSource: function(index) {
-            return sources[index];
+            return $(".sources-"+index);
         },
         getGallery: function(index) {
-            return galleries[index];
+            return $(".gallery-"+index);
         },
         getID: function($elem) {
             var className = $elem.attr("class");
@@ -47,13 +44,13 @@ define(["jquery", "events"], function($, events) {
         getElem: function(id) {
             switch(id.type) {
                 case "content":
-                    return contents[id.index];
+                    return this.getContent(id.index);
                 case "more":
-                    return mores[id.index];
+                    return this.getMore(id.index);
                 case "sources":
-                    return sources[id.index];
+                    return this.getSource(id.index);
                 case "gallery":
-                    return galleries[id.index];
+                    return this.getGallery(id.index);
             }
         },
         active: function($new, id) {

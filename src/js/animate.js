@@ -5,13 +5,9 @@ define(["jquery", "events", "elements", "sidenav", "start"], function($, events,
     
     
     events.on("go", function($active, $next) {
-        console.log($active, $next);
-        
         var nextID = elements.getID($next);
         var activeID = elements.activeID();
         var activeTimeout = 0;
-        var activeClass = "animate-out";
-        var nextClass = "animate-in";
 
         var activeBg = $active.css("background");
         var nextBg = $next.css("background");
@@ -47,18 +43,14 @@ define(["jquery", "events", "elements", "sidenav", "start"], function($, events,
                 activeTimeout = 2*800;
             }
         }
-
-        if(activeID.index === 1) {
+        else if(activeID.index === 1) {
             activeTimeout = 1*1000;
+
         }
 
 
-        if($active.hasClass("special-animate")) {
-            $active.addClass("special-out");
-        }
-        else {
-            $active.addClass("animate-out");
-        }
+        
+        $active.addClass("animate-out");
 
         $active.removeClass("show-in show-out");
         $next.removeClass("show-in show-out");
