@@ -1,3 +1,4 @@
-* Show/hide panes in events (or elsewhere)
-* Bundle up some files (-out & -in in same files for example)
-* Make forward and backward animations for 2.1-3 : They should have some timeout on forward, but not on backward.
+* Fix galleries: messy animations (mostly on arrows)
+* Polish animations
+* Sync timeouts in animate.js
+* Fix start button not animating out on special-out
