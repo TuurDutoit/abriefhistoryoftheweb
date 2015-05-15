@@ -10,6 +10,10 @@ define(["jquery", "events"], function($, events) {
     
     
     var exports = {
+        init: function() {
+            $panes = $(".pane");
+            panes = $panes.toArray().map($);
+        },
         get: function(index) {
             return panes[index];
         },

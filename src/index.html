@@ -3,20 +3,18 @@
     <head>
         <meta charset="utf8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="A Brief History of the Web tells the interactive story of how the World Wide Web was born, how it grew and where it stands today." />
+        <meta name="description" content="A Brief History of the Web tells the story of how the World Wide Web was born, how it grew and where it stands today." />
         <meta name="keywords" content="history story world wide web internet CERN" />
-        <title>A Brief History of the Web</title>
+        <title>A Brief History of the Web | By Tuur Dutoit and Quint Daenen</title>
         
         <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="css/lib/slick.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+        <script type="text/javascript" src="data.js"></script>
     </head>
     <body>
-        <nav class="side-nav">
-            <div class="dot selected" title="Go to: Home"></div>
-            <div class="dot" title="Go to: Part 1"></div>
-            <div class="dot" title="Go to: Part 2"></div>
-        </nav>
+        <nav class="side-nav"></nav>
         <main>
             <section class="pane content content-0 show">
                 <div class="floater"></div>
@@ -39,43 +37,9 @@
                     <p>Data was collected and processed by hand,<br /> text was typed with a typewriter<br /> and letters and telegram were the de-facto communication methods.<br /> Until...</p>
                 </div>
             </section>
-            <section class="pane content content-2">
-                <div class="date">1876</div>
-                <img src="img/phone.gif" class="image" />
-                <div class="title">
-                    Alexander Graham Bell invents the telephone.
-                    <div class="extras">
-                        <i class="fa fa-info" title="More info"></i>
-                        <i class="fa fa-camera" title="Gallery"></i>
-                        <i class="fa fa-link" title="Sources"></i>
-                    </div>
-                </div>
-            </section>
-            <section class="pane sources sources-2">
-                <h1 class="title">Sources</h1>
-                <ul>
-                    <li><a href="http://en.wikipedia.com/Alexander_Graham_Bell" target="_blank">http://en.wikipedia.com/Alexander_Graham_Bell</a></li>
-                    <li><a href="http://bell-labs.com" target="_blank">http://bell-labs.com</a></li>
-                </ul>
-            </section>
-            <section class="pane more more-2">
-                <h1 class="title">More info</h1>
-                <p>On 7 march 1876, Alexander Graham Bell registers a patent for "the method of, and apparatus for, transmitting vocal or other sounds telegraphically...". In simpler terms: the telephone. He wasn't the only one working on it, of course, but he was the first to get one working and to register a patent.<br />In 1877, he founded the Bell Telephone Company, the company that would run the phone lines for the forseeable future and would - as we now know - play a vital role in our story.</p>
-            </section>
-            <section class="pane gallery gallery-2">
-                <div class="inner">
-                    <div class="photo">
-                        <h1 class="title">Alexander Graham Bell</h1>
-                        <img src="img/alexander-graham-bell.jpg" />
-                    </div>
-                    <div class="photo">
-                        <h1 class="title">A. G. Bell showcasing his telephone</h1>
-                        <img src="img/agb-showing-telephone.jpg" />
-                    </div>
-                </div>
-            </section>
         </main>
         
+        <script type="text/javascript" src="js/populate.js"></script>
         <script type="text/javascript" src="js/lib/require.min.js" data-main="js/main.js"></script>
     </body>
 </html>
