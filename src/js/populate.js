@@ -46,11 +46,23 @@
             var $title = $('<h1 class="title">More info</h1>');
             $more.append($title);
             
+            var $inner = $('<div class="inner"></div>');
+            
             for(var j = 0, lenj = more.length; j < lenj; j++) {
-                var $part = $('<p>'+more[j]+'</p>');
-                $more.append($part);
+                var part = more[j];
+                if(typeof part === "object") {
+                    var $part = $(part.tag);
+                    var $content = $(part.content);
+                    $part.append($content);
+                }
+                else {
+                    var $part = $('<p>'+part+'</p>');
+                }
+                
+                $inner.append($part);
             }
             
+            $more.append($inner);
             $main.append($more);
         }
         
@@ -91,16 +103,16 @@
                 var $photo = $('<div class="photo"></div>');
                 
                 if(typeof photo === "object") {
-                    var $title = $('<h1 class="title"'+photo.title+'</div>');
+                    var $title = $('<h1 class="title">'+photo.title+'</div>');
                     var $image = $('<img src="'+photo.image+'" />');
                 }
                 else {
                     var $title = $('<h1 class="title">'+photo+'</div>');
                     var $image = $('<img src="img/'+index+'.'+ (j+1) + '.jpg" />');
-                    $photo.append($title);
-                    $photo.append($image);
                 }
                 
+                $photo.append($title);
+                $photo.append($image);
                 $inner.append($photo);
             }
             

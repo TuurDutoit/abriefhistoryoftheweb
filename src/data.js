@@ -34,13 +34,50 @@ var DATA = [
             "date": "1886"
         },
         "more": [
-            "The telephone was a giant success. It was a huge improvement over the telegraph, but didn't require a big infrastructural changes. So, by 1886 - just 10 years after Alexander Graham Bell registered his patent - about 150.000 USA residents owned a telephone."
+            "The telephone was a giant success, probably because it was a huge improvement over telegraph, but didn't require big infrastructural changes. Let's show you just how big this growth was:",
+            {
+                "tag": '<table></table>',
+                "content": '<tr><th>Year</th><th>Number of phones</th></tr><tr><td>1878</td><td>10.000</td></tr><tr><td>1900</td><td>800.000</td></tr><td>1930</td><td>15.000.000</td></tr><tr><td>1948</td><td>30.000.000</td></tr>'
+            }
         ],
         "sources": [
             "http://en.wikipedia.org/wiki/Alexander_Graham_Bell#Later_developments",
             "http://www.telephonymuseum.com/telephone%20history.htm",
             "http://www.telephonymuseum.com/History%201901-1940.htm",
             "http://www.telephonymuseum.com/History%201940-today.htm"
+        ]
+    },
+    {
+        "content": {
+            "title": "The first transistor",
+            "date": "1947"
+        },
+        "more": [
+            "Around the 1900s, the growth of the Bell Telephone Company (by that time called AT&T) is getting really problematic: vacuum tubes were used to amplify and connect lines, but these were bulky, unreliable and required lots of power. So, at the end of World War II, a research team, including Bill Shockley, Walter Brattain and John Bardeen, was created at Bell Labs, AT&T's research arm.",
+            "In 1945, Shockley had designed what he hoped would be the first semiconductor amplifier. The device was a cylinder, coated with silicon and mounted close to a small, metal plate. Unfortunately, it didn't work.",
+            "In 1947, Brattain tried putting the whole device in a tub of water, and surprisingly, it worked ... a little bit.",
+            "Following more experiments, Brattain replaced the silicon with germanium and used gold instead of metal. These changes allowed a much better amplification. They had invented the point-contact transistor.",
+            "However, Shockley was furious because he hadn't been involved directly with the invention, so he set to work and, a month later, he came up with a new design, the junction transistor, which was a lot easier to manufacture.",
+            "The transistor went on to replace the bulky vacuum tubes and revolutionized the world of electronics."
+        ],
+        sources: [
+            "http://www.wired.com/2009/12/1223shockley-bardeen-brattain-transistor",
+            "http://www.pbs.org/transistor/album1/",
+            "http://www.nobelprize.org/educational/physics/transistor/history/",
+            "http://www.computerhistory.org/atchm/who-invented-the-transistor/",
+            "http://www.computerhistory.org/semiconductor/timeline/1947-invention.html"
+        ],
+        gallery: [
+            "A few old vacuum tubes",
+            {
+                "title": "An early 'computer' based on vacuum tubes",
+                "image": "img/4.2.gif"
+            },
+            "John Bardeen, William Shockley and Walter Brattain at work",
+            "The first (point-contact) transistor",
+            "Shockley's junction transistor",
+            "A more sophisticated transistor",
+            "A modern transistor"
         ]
     }
 ];
