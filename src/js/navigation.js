@@ -43,8 +43,12 @@ define(["jquery", "elements", "start"], function($, elements, start) {
             back();
         }
     })
-    .on("touchend", function(e) {
+    .on("swipeleft swipeup", function(e) {
         /* ... */
+        next();
+    })
+    .on("swiperight swipedown", function(e) {
+        back();
     });
     
     

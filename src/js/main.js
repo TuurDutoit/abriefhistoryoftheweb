@@ -6,6 +6,7 @@ requirejs.config({
 });
 
 
+require(["lib/jquery.event.move", "lib/jquery.event.swipe"]);
 require(["animate", "navigation", "sidenav", "extras", "close", "gallery"]);
 
 
