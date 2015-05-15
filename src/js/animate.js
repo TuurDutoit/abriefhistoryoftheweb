@@ -7,6 +7,7 @@ define(["jquery", "events", "elements", "sidenav", "start"], function($, events,
     events.on("go", function($active, $next) {
         var nextID = elements.getID($next);
         var activeID = elements.activeID();
+        var activeClass = "animate-out";
         var activeTimeout = 0;
 
         var activeBg = $active.css("background");
@@ -18,14 +19,12 @@ define(["jquery", "events", "elements", "sidenav", "start"], function($, events,
 
         switch(activeID.type) {
             case "content":
-                activeTimeout += 3*800;
-                break;
             case "more":
             case "sources":
-                activeTimeout += 3*800;
+                activeTimeout += 3*400;
                 break;
             case "gallery":
-                activeTimeout += 4*800;
+                activeTimeout += 4*400;
                 break;
         }
 
@@ -34,11 +33,9 @@ define(["jquery", "events", "elements", "sidenav", "start"], function($, events,
         if(activeID.index === 0) {
             if($active.hasClass("special-animate")) {
                 activeClass = "special-out";
-                activeTimeout = 1000;
             }
-            else {
-                activeTimeout = 2*800;
-            }
+            
+            activeTimeout = 2*400;
         }
         else if(activeID.index === 1) {
             activeTimeout = 1*1000;
@@ -47,7 +44,7 @@ define(["jquery", "events", "elements", "sidenav", "start"], function($, events,
 
 
         
-        $active.addClass("animate-out");
+        $active.addClass(activeClass);
 
         $active.removeClass("show-in show-out");
         $next.removeClass("show-in show-out");
@@ -81,70 +78,3 @@ define(["jquery", "events", "elements", "sidenav", "start"], function($, events,
     });
     
 });
-
-
-
-
-
-
-
-/*
-define(["jquery", "navigation", "sidenav"], function($, navigation, sidenav) {
-    
-    var $panes = $(".pane");
-    var $pane0 = $(".pane0");
-    
-    
-    navigation.on("go", function(currentIndex, nextIndex) {
-        var $current = $($panes.get(currentIndex));
-        var $next = $($panes.get(nextIndex));
-        var isIntro = currentIndex === 0 && $current.hasClass("special-animate");
-
-
-        if(isIntro) {
-            $current.addClass("special-out");
-            var timeout = 1200;
-        }
-        else if(currentIndex === 0) {
-            $current.addClass("animate-out");
-            var timeout = 1000;
-        }
-        else if(currentIndex === 1) {
-            $current.addClass("animate-out");
-            var timeout = 1000;
-        }
-        else {
-            $current.addClass("animate-out");
-            var timeout = 2400;
-        }
-
-
-        setTimeout(function() {
-            $current.removeClass("show");
-            $next.addClass("show");
-
-            $current.removeClass("animate-in animate-out special-animate special-out");
-            
-            var currentBg = $current.css("background");
-            var nextBg = $next.css("background");
-            var sameBg = currentBg === nextBg;
-
-            setTimeout(function() {
-                sidenav.select(nextIndex);
-                
-                setTimeout(function() {
-                    $next.addClass("animate-in");
-                }, 300);
-            }, sameBg ? 0 : 1000);
-        }, timeout);
-
-    });
-
-    navigation.on("start", function() {
-        $pane0.removeClass("animate-in animate-out").addClass("special-animate");
-    });
-    
-    
-    
-});
-*/

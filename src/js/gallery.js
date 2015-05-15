@@ -4,9 +4,8 @@ define(["jquery", "elements", "slick"], function($, elements) {
         var $gallery = $(this);
         
         $gallery.find(".inner").slick({
-            prevArrow: '<i class="fa fa-chevron-left arrow arrow-left"></i>',
-            nextArrow: '<i class="fa fa-chevron-right arrow arrow-right"></i>',
-            appendArrows: $gallery.find(".arrows")
+            prevArrow: '<div class="arrow arrow-left"><i class="fa fa-chevron-left"></i></div>',
+            nextArrow: '<div class="arrow arrow-right"><i class="fa fa-chevron-right"></i></div>'
         });
     });
     

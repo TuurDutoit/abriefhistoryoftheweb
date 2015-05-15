@@ -113,7 +113,7 @@
         margin-left: 61px;
         padding: 5px 15px;
     }
-    33%, 66% {
+    40%, 60% {
         width: 0;
         margin-left: 0;
         padding: 5px 0;
@@ -175,7 +175,8 @@ body {
 .sources .title, .sources ul, .sources .close,
 .more .title, .more p, .more .close,
 .gallery .photo img, .gallery .photo .title,
-.gallery .arrows, .gallery .close {
+.gallery .arrow, .gallery .close,
+.content-0 .controls {
     opacity: 0;
 }
 
@@ -227,6 +228,8 @@ body {
 
 .sources ul {
     font-size: 25px;
+    text-align: center;
+    list-style: none;
     color: grey;
 }
 
@@ -243,7 +246,7 @@ body {
 }
 
 .sources .close {
-    color: grey;
+    color: #666666;
 }
 
 .more .title {
@@ -257,11 +260,11 @@ body {
     margin: 0 10%;
     line-height: 35px;
     font-size: 20px;
-    color: #2D2D2D;
+    color: #4C4C4C;
 }
 
 .more .close {
-    color: #2D2D2D;
+    color: #666666;
 }
 
 .gallery {
@@ -271,14 +274,6 @@ body {
 .gallery .inner, .gallery .slick-list, .gallery .slick-track, .gallery .photo {
     width: 100%;
     height: 100%;
-}
-
-.gallery .arrows {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
 }
 
 .gallery .photo {
@@ -307,29 +302,33 @@ body {
 .gallery .arrow {
     position: absolute;
     top: 50%;
+    margin-top: -20px;
     font-size: 40px;
     color: white;
     text-shadow: 0 0 20px #313131;
     cursor: pointer;
+}
+
+.gallery .arrow i {
     transition: transform .2s;
+}
+
+
+.gallery .arrow i:hover {
+    transform: scale(1.2);
+}
+
+.gallery .arrow-left {
+    left: 49px;
+}
+
+.gallery .arrow-right {
+    right: 49px;
 }
 
 .gallery .close {
     color: white;
     text-shadow: 0 0 20px #313131;
-}
-
-
-.gallery .arrow:hover {
-    transform: scale(1.2);
-}
-
-.gallery .arrow-left {
-    left: 30px;
-}
-
-.gallery .arrow-right {
-    right: 30px;
 }
 
 .floater {
@@ -341,7 +340,7 @@ body {
     right: 20px;
     top: 50%;
     z-index: 200;
-    margin-top: 22px;
+    margin-top: -22px;
 }
 
 .side-nav .dot {
@@ -400,109 +399,107 @@ body {
 }
 
 .content.animate-in .image {
-    -webkit-animation: fade-in-scale-image .8s both;
+    -webkit-animation: fade-in-scale-image .6s both;
 }
 
 .content.animate-in .date {
-    -webkit-animation: fade-in-scale .8s .8s both;
+    -webkit-animation: fade-in-scale .4s .6s both;
 }
 
 .content.animate-in .title {
-    -webkit-animation: fade-in-scale .8s 1.6s both;
+    -webkit-animation: fade-in-scale .4s 1s both;
 }
 
 .content.animate-out .image {
-    -webkit-animation: fade-out-scale-image .8s 1.6s both;
+    -webkit-animation: fade-out-scale-image .6s .8s both;
 }
 
 .content.animate-out .date {
-    -webkit-animation: fade-out-scale .8s .8s both;
+    -webkit-animation: fade-out-scale .4s .4s both;
 }
 
 .content.animate-out .title {
-    -webkit-animation: fade-out-scale .8s both;
+    -webkit-animation: fade-out-scale .4s both;
 }
 
 .more.animate-in .title {
-    -webkit-animation: fade-in-scale .8s both;
+    -webkit-animation: fade-in-scale .4s both;
 }
 
 .more.animate-in p {
-    -webkit-animation: fade-in-scale .8s .8s both;
+    -webkit-animation: fade-in-scale .4s .4s both;
 }
 
 .more.animate-in .close {
-    -webkit-animation: fade-in-scale .8s 1.6s both;
+    -webkit-animation: fade-in-scale .4s .8s both;
 }
 
 .more.animate-out .title {
-    -webkit-animation: fade-out-scale .8s 1.6s both;
+    -webkit-animation: fade-out-scale .4s .8s both;
 }
 
 .more.animate-out p {
-    -webkit-animation: fade-out-scale .8s .8s both;
+    -webkit-animation: fade-out-scale .4s .4s both;
 }
 
 .more.animate-out .close {
-    -webkit-animation: fade-out-scale .8s both;
+    -webkit-animation: fade-out-scale .4s both;
 }
 
 .sources.animate-in .title {
-    -webkit-animation: fade-in-scale .8s both;
+    -webkit-animation: fade-in-scale .4s both;
 }
 
 .sources.animate-in ul {
-    -webkit-animation: fade-in-scale .8s .8s both;
+    -webkit-animation: fade-in-scale .4s .4s both;
 }
 
 .sources.animate-in .close {
-    -webkit-animation: fade-in-scale .8s 1.6s both;
+    -webkit-animation: fade-in-scale .4s .8s both;
 }
 
 .sources.animate-out .title {
-    -webkit-animation: fade-out-scale .8s 1.6s both;
+    -webkit-animation: fade-out-scale .4s .8s both;
 }
 
 .sources.animate-out ul {
-    -webkit-animation: fade-out-scale .8s .8s both;
+    -webkit-animation: fade-out-scale .4s .4s both;
 }
 
 .sources.animate-out .close {
-    -webkit-animation: fade-out-scale .8s both;
+    -webkit-animation: fade-out-scale .4s both;
 }
 
 .gallery.animate-in .slick-list img {
-    -webkit-animation: fade-in-scale .8s both;
+    -webkit-animation: fade-in-scale .6s both;
 }
 
 .gallery.animate-in .title {
-    -webkit-animation: fade-in-scale .8s .8s both;
+    -webkit-animation: fade-in-scale .4s .6s both;
 }
 
-.gallery.animate-in .arrows {
-    opacity: 1;
-    -webkit-animation: fade-in-scale .8s 1.6 both;
+.gallery.animate-in .arrow {
+    -webkit-animation: fade-in-scale .4s 1s both;
 }
 
 .gallery.animate-in .close {
-    -webkit-animation: fade-in-scale .8s 2.4s both;
+    -webkit-animation: fade-in-scale .4s 1.4s both;
 }
 
 .gallery.animate-out .slick-list img {
-    -webkit-animation: fade-out-scale .8s 2.4s both;
+    -webkit-animation: fade-out-scale .6s 1.2s both;
 }
 
 .gallery.animate-out .title {
-    -webkit-animation: fade-out-scale .8s 1.6s both;
+    -webkit-animation: fade-out-scale .4s .8s both;
 }
 
-.gallery.animate-out .arrows {
-    opacity: 0;
-    -webkit-animation: fade-out-scale .8s .8s both;
+.gallery.animate-out .arrow {
+    -webkit-animation: fade-out-scale .4s .4s both;
 }
 
 .gallery.animate-out .close {
-    -webkit-animation: fade-out-scale .8s both;
+    -webkit-animation: fade-out-scale .4s both;
 }
 
 
@@ -523,7 +520,7 @@ body {
  *********************/
 
 
-.content-0 .inner, .content-0 .controls {
+.content-0 .inner {
     opacity: 1;
 }
 
@@ -605,41 +602,49 @@ body {
 }
 
 .content-0.animate-in .title, .content-0.animate-in .subtitle {
-    -webkit-animation: fade-in-scale .6s forwards;
+    -webkit-animation: fade-in-scale .4s forwards;
 }
 
 .content-0.animate-in .start-button {
-    -webkit-animation: fade-in-scale .6s .6s forwards;
+    -webkit-animation: fade-in-scale .4s .4s forwards;
 }
 
 .content-0.animate-out .title, .content-0.animate-out .subtitle {
-    -webkit-animation: fade-out-scale .6s .6s both;
+    -webkit-animation: fade-out-scale .4s .4s both;
 }
 
 .content-0.animate-out .start-button {
-    -webkit-animation: fade-out-scale .6s both;
+    -webkit-animation: fade-out-scale .4s both;
 }
 
 .content-0.special-animate .title, .content-0.special-animate .subtitle {
     opacity: 1;
-    -webkit-animation: fade-out-scale .8s both;
+    -webkit-animation: fade-out-scale .4s both;
+}
+
+.content-0.special-animate .start-button span {
+    -webkit-animation: fade-out .4s forwards;
 }
 
 .content-0.special-animate .start-button {
     opacity: 1;
-    -webkit-animation: start-cursor 2.4s .8s forwards;
-}
-
-.content-0.special-animate .start-button span {
-    -webkit-animation: fade-out .6s forwards;
+    -webkit-animation: start-cursor 2s .4s forwards;
 }
 
 .content-0.special-animate .start-text {
-    -webkit-animation: uncover-text .8s 2.4s forwards;
+    -webkit-animation: uncover-text .8s 1.6s forwards;
+}
+
+.content-0.special-animate .controls {
+    -webkit-animation: fade-in-scale .6s 2.4s forwards;
 }
 
 .content-0.special-out .start {
-    -webkit-animation: fade-out-scale 1s forwards;
+    -webkit-animation: fade-out-scale .4s .4s forwards;
+}
+
+.content-0.special-out .controls {
+    -webkit-animation: fade-out-scale .4s forwards;
 }
 
 

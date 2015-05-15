@@ -12,8 +12,10 @@ define(["jquery", "elements"], function($, elements) {
     }
     
     $sidenav.on("click", function(e) {
-        var index = $(e.target).index();
-        elements.activeIndex(index);
+        var $target = $(e.target);
+        if(!$target.hasClass("selected")) {
+            elements.activeID({type:"content", index: $target.index()});
+        }
     });
     
     
