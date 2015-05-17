@@ -149,13 +149,25 @@ var DATA = [
             "date": "1969"
         },
         "more": [
-            
+            "In the 1960s, research into networks and packet switching began and led to the creation of various networks, like NPL, CYCLADES, and Telenet. The most notable network was ARPANET, developed by the US Department of Defense, while searching for a flexible communication method that didn't depend on a central backbone. The first connection of ARPANET was initiated on 29 October 1969. The Internet quickly expanded to other universities and beyond and was fully commercialized by 1995.",
+            "In the 1980s, CERN had a problem: scientists from all around the globe where conducting experiments and publishing them on the Internet. But they all used different systems, so consulting other scientists' work was a real pain. Tim Berners-Lee, a British computer scientist and employee at CERN at that time, recognized this problem and, on 12 March 1989, he wrote a proposal for what would eventually become the World Wide Web. It was originally meant to be used within CERN, but he realized his concept had great potential to be used in other fields.",
+            "Together with Belgian computer scientist Robert Cailliau, he set to work. They developed HTTP, the protocol that drives the Web, HTML, the language that describes the content, and they wrote a first web browser, that could use those two technologies to display web pages. The Web was born."
         ],
         sources: [
-            "http://en.wikipedia.org/wiki/Internet#History"
+            "http://en.wikipedia.org/wiki/Internet#History",
+            "http://en.wikipedia.org/wiki/World_Wide_Web",
+            "http://en.wikipedia.org/wiki/ARPANET",
+            "http://en.wikipedia.org/wiki/Robert_Cailliau",
+            "http://en.wikipedia.org/wiki/Tim_Berners-Lee",
+            "http://www.internetsociety.org/internet/what-internet/history-internet/brief-history-internet",
+            "http://www.history.com/topics/inventions/invention-of-the-internet",
+            "http://www.w3.org/History.html",
+            "http://webfoundation.org/about/vision/history-of-the-web/"
         ],
         "gallery": [
-            
+            "Tim Berners-Lee",
+            "Robert Cailliau",
+            "The first web browser, written by Tim Berners-Lee and Robert Cailliau"
         ]
     }
 ];
