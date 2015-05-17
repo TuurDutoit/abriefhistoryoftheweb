@@ -104,15 +104,14 @@
                 
                 if(typeof photo === "object") {
                     var $title = $('<h1 class="title">'+photo.title+'</div>');
-                    var $image = $('<img src="'+photo.image+'" />');
+                    $photo.css("background-image", "url("+photo.image+")");
                 }
                 else {
                     var $title = $('<h1 class="title">'+photo+'</div>');
-                    var $image = $('<img src="img/'+index+'.'+ (j+1) + '.jpg" />');
+                    $photo.css("background-image", "url(img/"+index+"."+ (j+1) +".jpg)");
                 }
                 
                 $photo.append($title);
-                $photo.append($image);
                 $inner.append($photo);
             }
             
