@@ -58,7 +58,7 @@ define(["jquery", "events"], function($, events) {
             }
         },
         active: function($new, id) {
-            if($new) {
+            if($new && $new.size() && !$new.is($active)) {
                 events.emit("go", [$active, $new]);
                 $active = $new;
                 activeID = id || this.getID($new);

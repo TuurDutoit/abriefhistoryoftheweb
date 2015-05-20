@@ -35,7 +35,7 @@ define(["jquery", "events", "elements", "sidenav", "start"], function($, events,
                 activeClass = "special-out";
             }
             
-            activeTimeout = 2*400;
+            activeTimeout = 3*400;
         }
         else if(activeID.index === 1) {
             activeTimeout = 1*1000;

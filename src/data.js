@@ -88,7 +88,7 @@ var DATA = [
             "date": "Unspecified"
         },
         "more": [
-            "Let's be clear about this: <b>the</b> first computer doesn't exist: it was an evolution beginning a long, long time ago.",
+            "Let's be clear about this: <i>the</i> first computer doesn't exist: it was an evolution beginning a long, long time ago.",
             "The first 'computers' were simple computation aids, like counting rods, counting frames (abacus), tally sticks, slide rules, sectors, etc. Whether they can count as computers is highly susceptible.",
             "During the Hellenistic period, many complex devices were used to perform complex calculations. Good examples are the planisphere - a mechanical star chart - and the astrolabe, which was used to solve astronomy problems.",
             "When the Roman Empire fell and the Middle Ages began, however, humanity was back to the simple calculation aids. Until, closer to the nineteenth century, analog computers saw the light of day. Analog computers are a class of mechanical devices that are made for a specific purpose, which is baked in the design: they perform one task or one type of calculations, much like the Hellenistic devices. Again, whether they count as computers is highly susceptible.",
@@ -168,6 +168,47 @@ var DATA = [
             "Tim Berners-Lee",
             "Robert Cailliau",
             "The first web browser, written by Tim Berners-Lee and Robert Cailliau"
+        ]
+    },
+    {
+        "content": {
+            "title": "The Browser Wars",
+            "date": "From 1995"
+        },
+        "more": [
+            "The Browser Wars is an ongoing series of fights for the dominance in the usage share of web browsers. Over time, many different browsers were born and faded, and with them fights erupted or died away. Let me tell you the whole, thrilling story.",
+            "<h3>The First Browser War</h3>From 1991, after Tim Berners-lee published his WorldWideWeb browser, a lot of other browsers were developed, the most influential of which was Mosaic. It was extremely popular and by October 1994 it was said to be '<i>well on its way to becoming the world's standard interface</i>'.<br />Mosaic was even licensed by several companies to create their own commercial browsers.",
+            "On 4 April 1994, Marc Andreessen, one of the Mosaic developers, founded <i>Mosaic Communications Corporation</i>, later renamed <i>Netscape Communications Corporation</i>, and created a new web browser called <i>Netscape Navigator</i>. It improved on Mosaic's usability and reliability and could display web pages as they loaded. This, and the fact the it was free for non-commercial use, made Netscape the dominant browser by 1995.",
+            "In 1995, Microsoft released Internet Explorer 1. It was just a first version, and Netscape dominated the market, so it wasn't very wildly used.",
+            "Only three months later, however, Microsoft released Internet Explorer 2.0, and made it available for free for eveyone, including for commercial use. New versions of both Netscape and Internet Explorer followed at a rapid pace and features were routinely added: Netscape implemented JavaScript (later replicated by Microsoft as JScript) and proprietary HTML tags, like <blink> and &lt;marquee&gt; were added.",
+            "In 1996, Internet Explorer nearly reached feature parity with Netscape with version 3.0, which offered scripting support and the first implementation of CSS.",
+            "In October 1997, Internet Explorer 4.0 was released. The release party in San Francisco featured a ten-foot-tall 'e' logo, which Netscape employees found on their front lawn with a sign attached reading '<i>From the IE team ... We love you.</i>'. They promptly knocked it over and placed a giant figure of their Mozilla dinosaur mascot on top, holding a sign reading '<i>Netscape 72, Microsoft 18</i>', representing the market distribution.",
+            "The rivalry between Netscape and Microsoft didn't only bring innovation to the Web, but also a lot of fragmentation: they both had their own features, which the other didn't support, resulting in unpredictable rendering of web pages. This was a pain for webdevelopers at the time, so they would often include badges reading '<i>Best viewed in Netscape</i>' or '<i>Best viewed in Internet Explorer</i>' on their websites.",
+            "With versions 5 and 6 of Internet Explorer, Microsoft was steadily overtaking Netscape. There were two reasons for this: <ol><li>Netscape's only revenue came from their browser, which made them financially vulnerable. Microsoft on the other hand, had virtually unlimited resources and could thus easily make Internet Explorer completely free to use.</li><li>Microsoft had a huge advantage over Netscape, because it installed Internet Explorer by default on all Windows installations. Most computer purchases at the time were first computer purchases, so most users had never extensively used a web browser. As a result, they had nothing to compare with and little motivation to consider alternatives.</li></ol>",
+            "In 1998, Netscape threw in the towel and was acquired by America Online for $4.2 billion.",
+            "This is when the first Browser War: Internet Explorer had no serious competition anymore. This also brought an end to the rapid innovation of web browsers: until 2006, just one new version of Internet Explorer was released since version 6.0 in 2001.",
+            "<h3>The Second Browser War</h3>After their defeat, Netscape open-sourced their code, which was picked up by the Mozilla Foundation, a project to create a successor to Netscape Navigator.<br />In 2004, a few things happened. In April, Opera and Mozilla joined forces and created the WHATWG, a working group dedicated to the fast creation of new Web standards that would be submitted to the W3C, the Web's standards body. A few months later, on 9 November, Firefox 1.0 was released. Its market share would slowly grow until 2010, after which it would remain largely stable.<br />Finally 2004 was also the year that the newly-formed WHATWG began to work on HTML5, the new and revolutionary Web standard. This task was only finished on 28 October 2014, when the specification was formally approved by the W3C.",
+            "The following years, a lot of small things happened in the browser world, but I won't go into detail on that.",
+            "However, on 11 December 2008, all these events led to the first release of Google Chrome. It was fully standards-compliant, it was simple, it was fast and, because it was open source, it worked everywhere. These traits, and the backing of a huge software giant, are the reasons why Chrome is now the dominant browser.",
+            "Microsoft, Mozilla, Opera, Apple and a lot of other browser vendors are still fighting hard, so the Browser Wars are absolutely not over. However, it looks like Chrome will be at the top for the forseeable future."
+        ],
+        "sources": [
+            "http://en.wikipedia.org/wiki/Browser_wars",
+            "http://en.wikipedia.org/wiki/Google_Chrome",
+            "http://en.wikipedia.org/wiki/HTML5",
+            "http://en.wikipedia.org/wiki/Mosaic_%28web_browser%29",
+            "http://en.wikipedia.org/wiki/Netscape",
+            "http://en.wikipedia.org/wiki/Internet_Explorer_versions",
+            "http://en.wikipedia.org/wiki/Firefox",
+            "http://en.wikipedia.org/wiki/Mozilla",
+            "http://www.ncsa.illinois.edu/enabling/mosaic",
+            "http://www.referenceforbusiness.com/businesses/M-Z/Netscape-Communications-Corporation.html",
+            "http://www.statetechmagazine.com/article/2013/08/visual-history-internet-explorer",
+            "http://www.sfgate.com/business/article/Microsoft-Pulls-Prank-Company-takes-browser-war-2803749.php",
+            "http://money.cnn.com/1998/11/24/technology/aol/",
+            "https://wiki.whatwg.org/wiki/FAQ#The_WHATWG",
+            "http://www.w3.org/TR/html5/",
+            "http://googlechromereleases.blogspot.be/2008/12/stable-release-google-chrome-is-out-of.html"
         ]
     }
 ];

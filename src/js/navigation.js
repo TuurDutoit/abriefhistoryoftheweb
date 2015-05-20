@@ -21,6 +21,10 @@ define(["jquery", "elements", "start"], function($, elements, start) {
         go(elements.activeIndex() - 1);
     }
     
+    var close = function() {
+        elements.activeType("content");
+    }
+    
     
     
     $(document).on("keydown", function(e) {
@@ -32,6 +36,9 @@ define(["jquery", "elements", "start"], function($, elements, start) {
             case 39:
             case 40:
                 next();
+                break;
+            case 27:
+                close();
                 break;
         }
     })
