@@ -210,5 +210,27 @@ var DATA = [
             "http://www.w3.org/TR/html5/",
             "http://googlechromereleases.blogspot.be/2008/12/stable-release-google-chrome-is-out-of.html"
         ]
+    },
+    {
+        "content": {
+            "title": "Search Engines",
+            "date": "1994"
+        },
+        "more": [
+            "The Web is mind-bogglingly big. Just to give you an idea: the total amount of data stored on the Internet is estimated to be a few hundreds of exabytes; one exabyte is a 1 followed by 18 zeros. Believe me, that's big.",
+            "Obviously, it is impossible for any human being to search through that immense pile of data. So we let specialized computers, called search engines, do the job for us.",
+            "At the humble beginnings of the Web, only a few dozen pages were available online. That was pretty easy to browse, and Tim Berners-Lee kept track of all the pages in a document. But, as you probably already guessed, the Web quickly grew too big and other methods had to be put to work.",
+            "The first search engine was called Archie. It ran on the CERN servers and searched for documents whose filenames contained certain keywords. This worked well for a while, but when the Web grew even bigger, people wanted to search the contents of the documents.",
+            "Quickly, a lot of other search engines erupted: the most wildly known were Lycos, AltaVista, Daum, Yahoo, Yandex and Google of course.",
+            "In 1995, Larry Page and Sergey Brin, students at the time, meet each other at Stanford. A year later, they launch their own search engine, BackRub, which ran on Stanford servers. They used a revelutionary technique for searching documents, now patented as PageRank, that allowed for far more relevant search results. They registered google.com in September 1997 and in August 1998 Andy Bechtolsheim became Google's first funder, when writing a $100.000 check for the two students. Google success story had begun.",
+            "Don't get me wrong here: even computers can't cope with the enormity of the Web. Google, the biggest Internet index to date, only indexed 0.04% of all the Web. "
+        ],
+        "sources": [
+            "http://en.wikipedia.org/wiki/History_of_the_Internet",
+            "http://www.google.com/about/company/history/",
+            "http://www.makeuseof.com/tag/the-archie-search-engine-the-worlds-first-search/",
+            "http://www.computerworld.com/article/2513110/data-center/scientists-calculate-total-data-stored-to-date--295--exabytes.html",
+            "http://www.worldwidewebsize.com/"
+        ]
     }
 ];
