@@ -232,5 +232,23 @@ var DATA = [
             "http://www.computerworld.com/article/2513110/data-center/scientists-calculate-total-data-stored-to-date--295--exabytes.html",
             "http://www.worldwidewebsize.com/"
         ]
+    },
+    {
+        "content": {
+            "title": "Wi-Fi",
+            "date": "1997"
+        },
+        "more": [
+            "In 1991, NCR and AT&T invented the precursor to Wi-Fi, intended to be used in cashier systems. They did some further developement and, in 1997, the standard was registered as IEEE 802.11; it allowed speeds of up to 2 Mbit/s. Two years later, in 1999, the Wi-Fi Alliance, which holds the Wi-Fi trademark, was founded and the first amendements to the Wi-Fi standard were registered as IEEE 802.11a and IEEE 802.11b. They allowed speeds up to 11 Mbit/s and proved to be popular.",
+            "Over the years, many further amendements have been published, namely g, n, ad and the latest: ac, released in December 2013 and which allows speeds of nearly 7Gbit/s.",
+            "Wi-Fi is now wildly used, with nearly all computers and smartphones having a chip built-in and many homes having a Wi-Fi capable router installed."
+        ],
+        "sources": [
+            "http://en.wikipedia.org/wiki/IEEE_802.11",
+            "http://en.wikipedia.org/wiki/Wi-Fi_Alliance",
+            "http://en.wikipedia.org/wiki/Wi-Fi",
+            "http://www.wi-fi.org/who-we-are",
+            "http://standards.ieee.org/about/get/802/802.11.html"
+        ]
     }
 ];
