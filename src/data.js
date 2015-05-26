@@ -213,7 +213,7 @@ var DATA = [
     },
     {
         "content": {
-            "title": "Search Engines",
+            "title": "The first search Engines",
             "date": "1994"
         },
         "more": [
@@ -235,7 +235,7 @@ var DATA = [
     },
     {
         "content": {
-            "title": "Wi-Fi",
+            "title": "The birth of Wi-Fi",
             "date": "1997"
         },
         "more": [
@@ -249,6 +249,55 @@ var DATA = [
             "http://en.wikipedia.org/wiki/Wi-Fi",
             "http://www.wi-fi.org/who-we-are",
             "http://standards.ieee.org/about/get/802/802.11.html"
+        ]
+    },
+    {
+        "content": {
+            "title": "The burst of the dot-com bubble",
+            "date": "2000"
+        },
+        "more": [
+            "In the late 1990s, the Web became accessible to everyone, even to the middle class, due to the advent of commercial ISPs (Internet Service Providers). This enormous growth of the online market made online business hot. Everyone was betting on these new e-businesses and if you wanted to get into stock trading, then was the time. Investing in online businesses, it didn't matter which, was considered the best bet you could make. Stocks soared high, the Web was the future.",
+            "But of course, there was a downside. At that time, nearly all online businesses used the same strategy: invest as much money as you can get, make sure you grow as fast as possible, that you are as far ahead of the competition as you can possibly get. Only then start thinking about profits. Obviously, this didn't last very long. At the end of the year 1999 and the beginning of the year 2000, stock traders realized what a big riscs they were taking. They began to be more careful, but the still growing confidence of the companies asked for more money. Then, the first companies imploded, and within a year, the rest followed, like a domino, until nothing was left of the recently so glorious economy.",
+            "Many companies, like Pets.com (probably the most famous example) went completely bankrupt, but a few managed to keep themselves alive. Amazon.com, for example, saw its stocks go first from $18 to over $100, before crashing back to under $10 after the burst of the Bubble. After the crash they slowly recovered, with stocks going $35 apiece in 2005 and over $400 in 2015."
+        ],
+        "sources": [
+            "http://en.wikipedia.org/wiki/Dot-com_bubble",
+            "http://time.com/3741681/2000-dotcom-stock-bust/",
+            "http://www.businessinsider.com/heres-why-the-dot-com-bubble-began-and-why-it-popped-2010-12?IR=T",
+            "http://www.nasdaq.com/symbol/amzn/historical"
+        ]
+    },
+    {
+        "content": {
+            "title": "The future of the Web: Web 2.0",
+            "date": "Today"
+        },
+        "more": [
+            "Since Tim Berners-lee's first description and implementation of the Web in the 1990s, the Web has changed. 20 years ago, web pages consisted of (scientific) text, later on some images, and a few links to relevant pages. But now, computers are so common and an order of magnitude more powerful than those back then, that this structure wasn't well suited anymore. We want fast, beautiful, usable experiences, instant communication, interactivity and so much more. Just a bit of text won't solve the problem anymore.",
+            "The term <i>Web 2.0</i> was first coined by Darci DiNucci in 1999, but was only popularized in 2004 by Tim O'Reilly and Dale Dougherty at a special conference. They hadn't any specific technical changes in mind, but rather a new way of publishing things on and using the Web.",
+            "Nearly at the same time, Mozilla and Opera teamed up to form the WHATWG, about wich I told you in '<i>The Browser Wars</i>', and which was instructed to work on some new technologies that would make the much needed evolution of the Web possible.",
+            "Now, about 10 years later, the WHATWG has produced a lot of exciting new things, many of which are still being implemented by browser makers. The most notable features include: communication with the server without refreshing the page (AJAX, WebSockets); new HTML tags that improve its semantics (like &lt;main&gt;, &lt;nav&gt;, &lt;article&gt;, etc); many additions to CSS (CSS3); a lot of new JavaScript APIs allowing much deeper integration with the client computer (ECMAScript 5 and 6); and a lot of other cool stuff! This huge amount of improvements to the Web is usually referred to as <i>HTML5</i> - this term is <i>Web 2.0</i>'s technical counterpart.",
+            "All these efforts have lead to big change in how the Web is being used: 20 years ago, web pages consisted of text and links, now we are used to full-blown interactive and instant applications like Facebook, GMail and many more."
+        ],
+        "sources": [
+            "http://en.wikipedia.org/wiki/Web_2.0",
+            "http://www.web2summit.com/web2011/public/content/about",
+            "http://www.oreilly.com/pub/a/web2/archive/what-is-web-20.html",
+            "http://darcyd.com/",
+            "http://www.britannica.com/EBchecked/topic/1192837/Web-20",
+            "https://wiki.whatwg.org/wiki/FAQ#What_is_the_WHATWG.3F"
+        ]
+    },
+    {
+        "content": {
+            "title": "At least for now",
+            "date": "The End"
+        },
+        "more": [
+            "This is where this story ends ... at least for now. The Internet is still growing, at unbelievable speeds, and everyone, including you, is a part of it. Its history has been a little wobbly at times, but it stands strong and will always be. If we take care of it. Be a good citizen, be curteous, grow with the Web and make the Web grow. It's the only thing that really can unite everyone on Earth.",
+            "Have a great time online and thanks for taking the time to read all this.",
+            "<br />PS: The flag you just saw is a proposal by Swedich student Oskar Pernefeldt for a global flag of planet Earth, to be used in space exploration and on global conferences. Have a look at the website: <a href=\"http://flagofplanetearth.com\" target=\"_blank\">flagofplanetearth.com</a>."
         ]
     }
 ];
