@@ -3,7 +3,6 @@
  *********/
 
 @import url(http://fonts.googleapis.com/css?family=Bree+Serif);
-@import url(lib/slick.css);
 @import url(../font-awesome/css/font-awesome.css);
 
 @font-face {
@@ -12,6 +11,19 @@
     font-weight: 400;
     src: local('Futura'), local('Futura-Regular'), url(../fonts/futura.woff) format('woff');
 }
+
+
+
+
+
+
+/*********
+ * SLICK *
+ *********/
+
+@import url(lib/slick.css);
+
+
 
 
 

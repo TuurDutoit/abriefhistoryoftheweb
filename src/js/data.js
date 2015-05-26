@@ -1,4 +1,4 @@
-var DATA = [
+module.exports = [
     {
         "content": {
             "title": "Alexander Graham Bell invents the telephone",
