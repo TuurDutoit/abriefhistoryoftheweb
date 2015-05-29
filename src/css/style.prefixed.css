@@ -37,6 +37,15 @@
  * KEYFRAMES *
  *************/
 
+@-webkit-keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes fade-out {
     0% {
         opacity: 1;
@@ -46,73 +55,178 @@
     }
 }
 
-@keyframes fade-in-out-scale {
+@-webkit-keyframes fade-in-out-scale {
     0% {
         opacity: 0;
-        transform: scale(.9);
+        -webkit-transform: scale(.9);
+                transform: scale(.9);
     }
     25%, 75% {
         opacity: 1;
-        transform: scale(1);
+        -webkit-transform: scale(1);
+                transform: scale(1);
     }
     100% {
         opacity: 0;
-        transform: scale(.9);
+        -webkit-transform: scale(.9);
+                transform: scale(.9);
+    }
+}
+
+@keyframes fade-in-out-scale {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.9);
+                transform: scale(.9);
+    }
+    25%, 75% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(.9);
+                transform: scale(.9);
+    }
+}
+
+@-webkit-keyframes fade-in-scale {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.8);
+                transform: scale(.8);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
     }
 }
 
 @keyframes fade-in-scale {
     0% {
         opacity: 0;
-        transform: scale(.8);
+        -webkit-transform: scale(.8);
+                transform: scale(.8);
     }
     100% {
         opacity: 1;
-        transform: scale(1);
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
+
+@-webkit-keyframes fade-in-scale-short {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.9);
+                transform: scale(.9);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
     }
 }
 
 @keyframes fade-in-scale-short {
     0% {
         opacity: 0;
-        transform: scale(.9);
+        -webkit-transform: scale(.9);
+                transform: scale(.9);
     }
     100% {
         opacity: 1;
-        transform: scale(1);
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
+
+@-webkit-keyframes fade-in-scale-image {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) scale(.8);
+                transform: translate(-50%, -50%) scale(.8);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
     }
 }
 
 @keyframes fade-in-scale-image {
     0% {
         opacity: 0;
-        transform: translate(-50%, -50%) scale(.8);
+        -webkit-transform: translate(-50%, -50%) scale(.8);
+                transform: translate(-50%, -50%) scale(.8);
     }
     100% {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@-webkit-keyframes fade-out-scale {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(.8);
+                transform: scale(.8);
     }
 }
 
 @keyframes fade-out-scale {
     0% {
         opacity: 1;
-        transform: scale(1);
+        -webkit-transform: scale(1);
+                transform: scale(1);
     }
     100% {
         opacity: 0;
-        transform: scale(.8);
+        -webkit-transform: scale(.8);
+                transform: scale(.8);
+    }
+}
+
+@-webkit-keyframes fade-out-scale-image {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) scale(.8);
+                transform: translate(-50%, -50%) scale(.8);
     }
 }
 
 @keyframes fade-out-scale-image {
     0% {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
     }
     100% {
         opacity: 0;
-        transform: translate(-50%, -50%) scale(.8);
+        -webkit-transform: translate(-50%, -50%) scale(.8);
+                transform: translate(-50%, -50%) scale(.8);
+    }
+}
+
+@-webkit-keyframes uncover-text {
+    0% {
+        max-width: 0px;
+    }
+    100% {
+        max-width: 240px;
     }
 }
 
@@ -122,6 +236,24 @@
     }
     100% {
         max-width: 240px;
+    }
+}
+
+@-webkit-keyframes start-cursor {
+    0% {
+        width: 77px;
+        margin-left: 61px;
+        padding: 5px 15px;
+    }
+    40%, 60% {
+        width: 0;
+        margin-left: 0;
+        padding: 5px 0;
+    }
+    100% {
+        width: 0;
+        margin-left: 240px;
+        padding: 5px 0;
     }
 }
 
@@ -174,14 +306,18 @@ body {
     right: 30px;
     font-size: 40px;
     cursor: pointer;
-    transition: transform .2s;
+    -webkit-transition: -webkit-transform .2s;
+            transition: transform .2s;
 }
 
 .pane .close:hover {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
 }
 
 .content, .sources, .more {
+    background: -webkit-radial-gradient(50% 50%, ellipse closest-corner, rgb(255, 185, 55) 0%, rgb(255, 165, 0) 100%);
     background: radial-gradient(ellipse closest-corner at 50% 50%, rgb(255, 185, 55) 0%, rgb(255, 165, 0) 100%);
 }
 
@@ -224,7 +360,9 @@ body {
     top: 50%;
     left: 50%;
     height: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .content .extras {
@@ -234,11 +372,14 @@ body {
 .content .extras i {
     padding: 0 5px;
     cursor: pointer;
-    transition: transform .3s;
+    -webkit-transition: -webkit-transform .3s;
+            transition: transform .3s;
 }
 
 .content .extras i:hover {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
 }
 
 .sources .title, .pane .body .title {
@@ -345,12 +486,15 @@ body {
 }
 
 .gallery .arrow i {
-    transition: transform .2s;
+    -webkit-transition: -webkit-transform .2s;
+            transition: transform .2s;
 }
 
 
 .gallery .arrow i:hover {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
 }
 
 .gallery .arrow-left {
@@ -381,7 +525,8 @@ body {
     margin: 15px 0;
     border-radius: 100%;
     cursor: pointer;
-    transition: all .3s;
+    -webkit-transition: all .3s;
+            transition: all .3s;
 }
 
 .side-nav .dot:first-child {
@@ -397,7 +542,9 @@ body {
 }
 
 .side-nav .dot:hover {
-    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+            transform: scale(1.3);
 }
 
 .floater {
@@ -426,115 +573,143 @@ body {
 }
 
 .pane.show-in {
-    transition: opacity 1s, visibility 0s 0s;
+    -webkit-transition: opacity 1s, visibility 0s 0s;
+            transition: opacity 1s, visibility 0s 0s;
 }
 
 .pane.show-out {
-    transition: opacity 1s, visibility 0s 1s;
+    -webkit-transition: opacity 1s, visibility 0s 1s;
+            transition: opacity 1s, visibility 0s 1s;
 }
 
 .content.animate-in .image {
-    animation: fade-in-scale-image .6s both;
+    -webkit-animation: fade-in-scale-image .6s both;
+            animation: fade-in-scale-image .6s both;
 }
 
 .content.animate-in .date {
-    animation: fade-in-scale .4s .6s both;
+    -webkit-animation: fade-in-scale .4s .6s both;
+            animation: fade-in-scale .4s .6s both;
 }
 
 .content.animate-in .title {
-    animation: fade-in-scale .4s 1s both;
+    -webkit-animation: fade-in-scale .4s 1s both;
+            animation: fade-in-scale .4s 1s both;
 }
 
 .content.animate-out .image {
-    animation: fade-out-scale-image .6s .8s both;
+    -webkit-animation: fade-out-scale-image .6s .8s both;
+            animation: fade-out-scale-image .6s .8s both;
 }
 
 .content.animate-out .date {
-    animation: fade-out-scale .4s .4s both;
+    -webkit-animation: fade-out-scale .4s .4s both;
+            animation: fade-out-scale .4s .4s both;
 }
 
 .content.animate-out .title {
-    animation: fade-out-scale .4s both;
+    -webkit-animation: fade-out-scale .4s both;
+            animation: fade-out-scale .4s both;
 }
 
 .more.animate-in .title {
-    animation: fade-in-scale .4s both;
+    -webkit-animation: fade-in-scale .4s both;
+            animation: fade-in-scale .4s both;
 }
 
 .more.animate-in .inner {
-    animation: fade-in-scale .4s .4s both;
+    -webkit-animation: fade-in-scale .4s .4s both;
+            animation: fade-in-scale .4s .4s both;
 }
 
 .more.animate-in .close {
-    animation: fade-in-scale .4s .8s both;
+    -webkit-animation: fade-in-scale .4s .8s both;
+            animation: fade-in-scale .4s .8s both;
 }
 
 .more.animate-out .title {
-    animation: fade-out-scale .4s .8s both;
+    -webkit-animation: fade-out-scale .4s .8s both;
+            animation: fade-out-scale .4s .8s both;
 }
 
 .more.animate-out .inner {
-    animation: fade-out-scale .4s .4s both;
+    -webkit-animation: fade-out-scale .4s .4s both;
+            animation: fade-out-scale .4s .4s both;
 }
 
 .more.animate-out .close {
-    animation: fade-out-scale .4s both;
+    -webkit-animation: fade-out-scale .4s both;
+            animation: fade-out-scale .4s both;
 }
 
 .sources.animate-in .title {
-    animation: fade-in-scale .4s both;
+    -webkit-animation: fade-in-scale .4s both;
+            animation: fade-in-scale .4s both;
 }
 
 .sources.animate-in ul {
-    animation: fade-in-scale .4s .4s both;
+    -webkit-animation: fade-in-scale .4s .4s both;
+            animation: fade-in-scale .4s .4s both;
 }
 
 .sources.animate-in .close {
-    animation: fade-in-scale .4s .8s both;
+    -webkit-animation: fade-in-scale .4s .8s both;
+            animation: fade-in-scale .4s .8s both;
 }
 
 .sources.animate-out .title {
-    animation: fade-out-scale .4s .8s both;
+    -webkit-animation: fade-out-scale .4s .8s both;
+            animation: fade-out-scale .4s .8s both;
 }
 
 .sources.animate-out ul {
-    animation: fade-out-scale .4s .4s both;
+    -webkit-animation: fade-out-scale .4s .4s both;
+            animation: fade-out-scale .4s .4s both;
 }
 
 .sources.animate-out .close {
-    animation: fade-out-scale .4s both;
+    -webkit-animation: fade-out-scale .4s both;
+            animation: fade-out-scale .4s both;
 }
 
 .gallery.animate-in .slick-list .photo {
-    animation: fade-in-scale .6s both;
+    -webkit-animation: fade-in-scale .6s both;
+            animation: fade-in-scale .6s both;
 }
 
 .gallery.animate-in .title {
-    animation: fade-in-scale .4s .6s both;
+    -webkit-animation: fade-in-scale .4s .6s both;
+            animation: fade-in-scale .4s .6s both;
 }
 
 .gallery.animate-in .arrow {
-    animation: fade-in-scale .4s 1s both;
+    -webkit-animation: fade-in-scale .4s 1s both;
+            animation: fade-in-scale .4s 1s both;
 }
 
 .gallery.animate-in .close {
-    animation: fade-in-scale .4s 1.4s both;
+    -webkit-animation: fade-in-scale .4s 1.4s both;
+            animation: fade-in-scale .4s 1.4s both;
 }
 
 .gallery.animate-out .slick-list .photo {
-    animation: fade-out-scale .6s 1.2s both;
+    -webkit-animation: fade-out-scale .6s 1.2s both;
+            animation: fade-out-scale .6s 1.2s both;
 }
 
 .gallery.animate-out .title {
-    animation: fade-out-scale .4s .8s both;
+    -webkit-animation: fade-out-scale .4s .8s both;
+            animation: fade-out-scale .4s .8s both;
 }
 
 .gallery.animate-out .arrow {
-    animation: fade-out-scale .4s .4s both;
+    -webkit-animation: fade-out-scale .4s .4s both;
+            animation: fade-out-scale .4s .4s both;
 }
 
 .gallery.animate-out .close {
-    animation: fade-out-scale .4s both;
+    -webkit-animation: fade-out-scale .4s both;
+            animation: fade-out-scale .4s both;
 }
 
 
@@ -620,7 +795,9 @@ body {
     cursor: pointer;
     outline: none;
     
-    transition: color .1s, background .1s;
+    -webkit-transition: color .1s, background .1s;
+    
+            transition: color .1s, background .1s;
 }
 
 .content-0 .start-button:hover {
@@ -650,61 +827,75 @@ body {
 }
 
 .content-0.animate-in .title, .content-0.animate-in .subtitle {
-    animation: fade-in-scale .4s forwards;
+    -webkit-animation: fade-in-scale .4s forwards;
+            animation: fade-in-scale .4s forwards;
 }
 
 .content-0.animate-in .start-button {
-    animation: fade-in-scale .4s .4s forwards;
+    -webkit-animation: fade-in-scale .4s .4s forwards;
+            animation: fade-in-scale .4s .4s forwards;
 }
 
 .content-0.animate-in .unfinished-alert {
-    animation: fade-in-scale .4s .8s forwards;
+    -webkit-animation: fade-in-scale .4s .8s forwards;
+            animation: fade-in-scale .4s .8s forwards;
 }
 
 .content-0.animate-out .title, .content-0.animate-out .subtitle {
-    animation: fade-out-scale .4s .8s both;
+    -webkit-animation: fade-out-scale .4s .8s both;
+            animation: fade-out-scale .4s .8s both;
 }
 
 .content-0.animate-out .start-button {
-    animation: fade-out-scale .4s .4s both;
+    -webkit-animation: fade-out-scale .4s .4s both;
+            animation: fade-out-scale .4s .4s both;
 }
 
 .content-0.animate-out .unfinished-alert {
-    animation: fade-out-scale .4s both;
+    -webkit-animation: fade-out-scale .4s both;
+            animation: fade-out-scale .4s both;
 }
 
 .content-0.special-animate .title, .content-0.special-animate .subtitle {
     opacity: 1;
-    animation: fade-out-scale .4s both;
+    -webkit-animation: fade-out-scale .4s both;
+            animation: fade-out-scale .4s both;
 }
 
 .content-0.special-animate .start-button span {
-    animation: fade-out .4s forwards;
+    -webkit-animation: fade-out .4s forwards;
+            animation: fade-out .4s forwards;
 }
 
 .content-0.special-animate .start-button {
     opacity: 1;
-    animation: start-cursor 2s .4s forwards;
+    -webkit-animation: start-cursor 2s .4s forwards;
+            animation: start-cursor 2s .4s forwards;
 }
 
 .content-0.special-animate .start-text {
-    animation: uncover-text .8s 1.6s forwards;
+    -webkit-animation: uncover-text .8s 1.6s forwards;
+            animation: uncover-text .8s 1.6s forwards;
 }
 
 .content-0.special-animate .controls {
-    animation: fade-in-scale .6s 2.4s forwards;
+    -webkit-animation: fade-in-scale .6s 2.4s forwards;
+            animation: fade-in-scale .6s 2.4s forwards;
 }
 
 .content-0.special-animate .unfinished-alert {
-    animation: fade-out-scale .4s forwards;
+    -webkit-animation: fade-out-scale .4s forwards;
+            animation: fade-out-scale .4s forwards;
 }
 
 .content-0.special-out .start {
-    animation: fade-out-scale .4s .4s forwards;
+    -webkit-animation: fade-out-scale .4s .4s forwards;
+            animation: fade-out-scale .4s .4s forwards;
 }
 
 .content-0.special-out .controls {
-    animation: fade-out-scale .4s forwards;
+    -webkit-animation: fade-out-scale .4s forwards;
+            animation: fade-out-scale .4s forwards;
 }
 
 
@@ -723,14 +914,16 @@ body {
     width: 100%;
     height: 100%;
     opacity: 1;
-    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+            transition: opacity 1s;
 }
 
 .content-1 p {
     display: block;
     opacity: 0;
     font-size: 25px;
-    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+            transition: opacity 1s;
 }
 
 .content-1 p:first-child {
@@ -754,15 +947,18 @@ body {
 }
 
 .content-1.animate-in p:first-child {
-    animation: fade-in-out-scale 4s 1s;
+    -webkit-animation: fade-in-out-scale 4s 1s;
+            animation: fade-in-out-scale 4s 1s;
 }
 
 .content-1.animate-in p:nth-child(2) {
-    animation: fade-in-out-scale 4s 6s;
+    -webkit-animation: fade-in-out-scale 4s 6s;
+            animation: fade-in-out-scale 4s 6s;
 }
 
 .content-1.animate-in p:last-child {
-    animation: fade-in-scale-short 1s 11s forwards;
+    -webkit-animation: fade-in-scale-short 1s 11s forwards;
+            animation: fade-in-scale-short 1s 11s forwards;
 }
 
 .content-1.animate-out .inner {

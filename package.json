@@ -1,0 +1,15 @@
+{
+    "name": "abriefhistoryoftheweb",
+    "description": "A Brief History of the Web",
+    "version": "1.0.0",
+    "devDependencies": {
+        "grunt": "*",
+        "grunt-browserify": "*",
+        "grunt-contrib-concat": "*",
+        "grunt-contrib-cssmin": "*",
+        "uglifyify": "*",
+        "grunt-autoprefixer": "*"
+    },
+    "repository": "https://github.com/TuurDutoit/abriefhistoryoftheweb",
+    "issues": "https://github.com/TuurDutoit/abriefhistoryoftheweb/issues"
+}
