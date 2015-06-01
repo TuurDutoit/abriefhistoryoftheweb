@@ -182,7 +182,7 @@ body {
 }
 
 .content, .sources, .more {
-    background: radial-gradient(ellipse closest-corner at 50% 50%, rgb(255, 185, 55) 0%, rgb(255, 165, 0) 100%);
+    background: radial-gradient(ellipse closest-corner at 50% 50%, rgb(255, 197, 89) 0%, rgb(255, 165, 0) 100%);
 }
 
 .gallery {
@@ -669,10 +669,6 @@ body {
     animation: fade-out-scale .4s .4s both;
 }
 
-.content-0.animate-out .unfinished-alert {
-    animation: fade-out-scale .4s both;
-}
-
 .content-0.special-animate .title, .content-0.special-animate .subtitle {
     opacity: 1;
     animation: fade-out-scale .4s both;
@@ -693,10 +689,6 @@ body {
 
 .content-0.special-animate .controls {
     animation: fade-in-scale .6s 2.4s forwards;
-}
-
-.content-0.special-animate .unfinished-alert {
-    animation: fade-out-scale .4s forwards;
 }
 
 .content-0.special-out .start {
